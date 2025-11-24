@@ -90,43 +90,71 @@ Paris, Lyon, Marseille, Toulouse, Nice, Nantes, Strasbourg, Montpellier, Lille, 
 
 ---
 
-## 🚀 Déploiement sur Netlify
+## 🚀 Déploiement
 
-### Option 1 : Quick Start (Rapide)
+### Étape 1 : Déployer sur Netlify
 
+#### Option A : Quick Start (Rapide)
 Suivre le guide : **[QUICK-START-NETLIFY.md](./QUICK-START-NETLIFY.md)**
-
 ⏱️ Déploiement en 10 minutes
 
-### Option 2 : Guide Détaillé
-
+#### Option B : Guide Détaillé
 Suivre le guide complet : **[NETLIFY-DEPLOY-GUIDE.md](./NETLIFY-DEPLOY-GUIDE.md)**
-
 📖 Toutes les étapes expliquées en détail
 
-### Configuration DNS
+### Étape 2 : Configuration DNS
 
-Une fois le site déployé sur Netlify, configurer les DNS :
+Vous avez **2 options** pour gérer vos DNS :
 
-👉 **[DNS-CONFIGURATION.md](./DNS-CONFIGURATION.md)**
+#### Option 1 : Cloudflare (Recommandé) ⚡
 
-Instructions spécifiques pour OVH, Gandi, O2Switch, Infomaniak, etc.
+**Avantages** :
+- ✅ CDN mondial gratuit (performance++)
+- ✅ Protection DDoS automatique
+- ✅ SSL/TLS gratuit
+- ✅ Configuration automatisée avec nos scripts
+- ✅ Analytics gratuits
+
+👉 **[CLOUDFLARE-SETUP.md](./CLOUDFLARE-SETUP.md)** - Configuration automatique complète
+
+```bash
+# Configuration automatique des 44 domaines
+export CLOUDFLARE_API_TOKEN="..."
+export CLOUDFLARE_ACCOUNT_ID="..."
+./scripts/cloudflare-setup.sh
+```
+
+#### Option 2 : DNS chez votre registrar
+
+Configuration manuelle chez OVH, Gandi, O2Switch, Infomaniak, etc.
+
+👉 **[DNS-CONFIGURATION.md](./DNS-CONFIGURATION.md)** - Instructions par hébergeur
 
 ---
 
 ## 🛠️ Scripts Utiles
 
-### Ajouter automatiquement les 44 domaines sur Netlify
+### Configuration Cloudflare (automatique)
 
 ```bash
+# Configurer automatiquement les 44 domaines sur Cloudflare
+export CLOUDFLARE_API_TOKEN="votre-token"
+export CLOUDFLARE_ACCOUNT_ID="votre-account-id"
+./scripts/cloudflare-setup.sh
+
+# Vérifier la configuration Cloudflare
+./scripts/verify-cloudflare.sh
+```
+
+### Configuration Netlify
+
+```bash
+# Ajouter automatiquement les 44 domaines sur Netlify
 export NETLIFY_SITE_ID="votre-site-id"
 export NETLIFY_TOKEN="votre-token-api"
 ./scripts/add-netlify-domains.sh
-```
 
-### Vérifier tous les domaines (DNS + HTTPS)
-
-```bash
+# Vérifier tous les domaines (DNS + HTTPS)
 ./scripts/verify-domains.sh
 ```
 
