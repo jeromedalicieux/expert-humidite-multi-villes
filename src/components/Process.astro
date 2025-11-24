@@ -1,0 +1,122 @@
+---
+// src/components/Process.astro
+interface Props {
+  city: {
+    name: string;
+  };
+}
+
+const { city } = Astro.props;
+---
+
+<section id="processus" class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+      Comment se déroule une expertise humidité à {city.name} ?
+    </h2>
+
+    <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+      Un processus clair et transparent pour un diagnostic précis de vos problèmes d'humidité
+    </p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Étape 1 -->
+      <div class="relative">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg relative z-10">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Prise de contact</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Contactez-nous par téléphone ou via notre formulaire. Nous échangeons sur votre problématique et fixons un rendez-vous à votre convenance.
+          </p>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Rapide</span>
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Sans engagement</span>
+          </div>
+        </div>
+        <!-- Ligne de connexion -->
+        <div class="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-blue-200" style="width: calc(100% - 2.5rem); margin-left: 1.25rem;"></div>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="relative">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg relative z-10">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Visite sur place</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Notre expert se déplace à {city.name} pour réaliser une inspection visuelle complète, des mesures hygrométriques et des relevés photographiques.
+          </p>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">1h30-2h</span>
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Sur site</span>
+          </div>
+        </div>
+        <!-- Ligne de connexion -->
+        <div class="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-blue-200" style="width: calc(100% - 2.5rem); margin-left: 1.25rem;"></div>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="relative">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg relative z-10">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Analyse approfondie</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Si nécessaire, des tests complémentaires sont réalisés en laboratoire pour analyser les matériaux et identifier précisément l'origine du problème.
+          </p>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Si besoin</span>
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Précis</span>
+          </div>
+        </div>
+        <!-- Ligne de connexion -->
+        <div class="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-blue-200" style="width: calc(100% - 2.5rem); margin-left: 1.25rem;"></div>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="relative">
+        <div class="flex flex-col items-center text-center">
+          <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-lg relative z-10">
+            4
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Rapport d'expertise</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Vous recevez un rapport détaillé sous 48-72h avec photos, explications des causes et préconisations de solutions adaptées à votre situation.
+          </p>
+          <div class="flex flex-wrap gap-2 justify-center">
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">2-3 jours</span>
+            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full">Détaillé</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Encart récapitulatif -->
+    <div class="mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8 text-center">
+      <div class="flex flex-wrap justify-center gap-8 text-left">
+        <div>
+          <div class="text-sm text-gray-600 mb-1">Durée sur place</div>
+          <div class="text-2xl font-bold text-blue-600">1h30 - 2h</div>
+        </div>
+        <div>
+          <div class="text-sm text-gray-600 mb-1">Délai du rapport</div>
+          <div class="text-2xl font-bold text-blue-600">48-72h</div>
+        </div>
+        <div>
+          <div class="text-sm text-gray-600 mb-1">Intervention</div>
+          <div class="text-2xl font-bold text-blue-600">{city.name}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 text-center">
+      <a href="#formulaire" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl">
+        Demander mon expertise
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,16 +1,243 @@
 ---
+// src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Process from '../components/Process.astro';
+import Coverage from '../components/Coverage.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import ContactForm from '../components/ContactForm.astro';
+import FloatingCTA from '../components/FloatingCTA.astro';
+import Footer from '../components/Footer.astro';
 
+import cityData from '../data/bordeaux.json';
+
+const city = cityData;
+
+// Génér le titre et la description SEO
+const title = `Expert Humidité ${city.name} | Diagnostic & Expertise Professionnelle 💧`;
+const description = `Expertise humidité à ${city.name} ✓ Diagnostic précis ✓ Rapport détaillé ✓ Expert indépendant ✓ Devis gratuit ☎ Intervention ${city.department}`;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={title} description={description} city={city}>
+  <Hero city={city} />
+
+  <!-- Section Présentation -->
+  <section id="presentation" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+        Expertise humidité à {city.name} : Un diagnostic précis pour votre bien
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-700 leading-relaxed">
+            Des <strong>taches sombres</strong> apparaissent sur vos murs ? Une <strong>odeur de moisi</strong>
+            tenace s'installe dans votre échoppe bordelaise ? Ce n'est pas un simple désagrément esthétique.
+            C'est un véritable signal d'alarme pour la santé de votre habitat et de ses occupants.
+          </p>
+
+          <p class="text-gray-700 leading-relaxed">
+            {city.name}, avec son <strong>climat {city.climate}</strong> et ses nombreux bâtiments anciens,
+            présente un terrain particulièrement propice aux problèmes d'humidité. {city.humidity_context}
+            créent un cocktail qui peut rapidement dégrader votre bien.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-blue-50 p-6 rounded-xl text-center">
+            <div class="text-4xl mb-2">🔍</div>
+            <h3 class="font-bold text-gray-900 mb-2">Diagnostic</h3>
+            <p class="text-sm text-gray-600">Analyse complète et précise</p>
+          </div>
+
+          <div class="bg-blue-50 p-6 rounded-xl text-center">
+            <div class="text-4xl mb-2">📊</div>
+            <h3 class="font-bold text-gray-900 mb-2">Rapport</h3>
+            <p class="text-sm text-gray-600">Détaillé avec photos</p>
+          </div>
+
+          <div class="bg-blue-50 p-6 rounded-xl text-center">
+            <div class="text-4xl mb-2">💡</div>
+            <h3 class="font-bold text-gray-900 mb-2">Solutions</h3>
+            <p class="text-sm text-gray-600">Préconisations adaptées</p>
+          </div>
+
+          <div class="bg-blue-50 p-6 rounded-xl text-center">
+            <div class="text-4xl mb-2">🏛️</div>
+            <h3 class="font-bold text-gray-900 mb-2">Indépendant</h3>
+            <p class="text-sm text-gray-600">Aucun conflit d'intérêt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Types de problèmes -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+        Les problèmes d'humidité fréquents à {city.name}
+      </h2>
+
+      <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+        L'humidité peut se manifester de différentes façons. Identifiez les signes dans votre logement.
+      </p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Remontées capillaires -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3 text-center text-gray-900">Remontées capillaires</h3>
+          <p class="text-gray-600 text-sm text-center">
+            L'eau du sol remonte dans les murs par capillarité. Signes : salpêtre, peinture écaillée en bas des murs.
+          </p>
+        </div>
+
+        <!-- Infiltrations -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3 text-center text-gray-900">Infiltrations</h3>
+          <p class="text-gray-600 text-sm text-center">
+            L'eau pénètre par la toiture ou la façade. Signes : traces d'eau, auréoles, taches brunâtres.
+          </p>
+        </div>
+
+        <!-- Condensation -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3 text-center text-gray-900">Condensation</h3>
+          <p class="text-gray-600 text-sm text-center">
+            L'humidité de l'air se condense sur les surfaces froides. Signes : buée, moisissures noires.
+          </p>
+        </div>
+
+        <!-- Ventilation défaillante -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+            <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+            </svg>
+          </div>
+          <h3 class="font-bold text-lg mb-3 text-center text-gray-900">Défaut de ventilation</h3>
+          <p class="text-gray-600 text-sm text-center">
+            L'air ne se renouvelle pas. Signes : air vicié, VMC défaillante, odeurs persistantes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Pourquoi un expert -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+        Pourquoi faire appel à un expert humidité à {city.name} ?
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { icon: '✓', title: 'Diagnostic précis et impartial', desc: 'Identification exacte de la cause du problème' },
+          { icon: '✓', title: 'Rapport détaillé avec photos', desc: 'Documentation complète de l\'état des lieux' },
+          { icon: '✓', title: 'Préconisations techniques', desc: 'Solutions adaptées à votre situation' },
+          { icon: '✓', title: 'Aide aux démarches', desc: 'Support pour vos dossiers d\'assurance' },
+          { icon: '✓', title: 'Éviter les arnaques', desc: 'Protection contre les entreprises malhonnêtes' },
+          { icon: '✓', title: 'Expert certifié', desc: 'Professionnel qualifié et assuré' }
+        ].map(item => (
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold">
+              {item.icon}
+            </div>
+            <div>
+              <h3 class="font-bold text-gray-900 mb-2">{item.title}</h3>
+              <p class="text-gray-600 text-sm">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="#formulaire" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl">
+          Demander mon diagnostic
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Process city={city} />
+  <Coverage city={city} />
+
+  <!-- Section Villes limitrophes (SEO Local) -->
+  {city.nearbyTowns && city.nearbyTowns.length > 0 && (
+    <section class="py-16 md:py-20 bg-white">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          Expert humidité également dans les villes autour de {city.name}
+        </h2>
+
+        <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+          Notre expert intervient rapidement dans toute la métropole bordelaise et ses communes limitrophes
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+          {city.nearbyTowns.map((town) => (
+            <div class="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-lg p-4 hover:shadow-lg hover:border-blue-300 transition-all duration-200 group">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <h3 class="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  {town}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Texte SEO pour villes limitrophes -->
+        <div class="bg-blue-50 rounded-xl p-8 max-w-4xl mx-auto">
+          <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
+            Expertise humidité dans toute la métropole de {city.name}
+          </h3>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p class="leading-relaxed">
+              Que vous habitiez à <strong>{city.nearbyTowns.slice(0, 3).join(', ')}</strong> ou dans une autre commune
+              de la métropole bordelaise, notre expert en humidité se déplace rapidement pour réaliser un
+              <strong> diagnostic complet et professionnel</strong> de vos problèmes d'humidité.
+            </p>
+            <p class="leading-relaxed mt-4">
+              Les problématiques d'humidité sont fréquentes dans l'ensemble de la région bordelaise en raison du
+              <strong> climat océanique</strong> et de la proximité de la Garonne. Remontées capillaires dans les maisons anciennes,
+              infiltrations, moisissures et condensation nécessitent l'intervention d'un expert indépendant pour identifier
+              précisément les causes et proposer des solutions durables.
+            </p>
+            <div class="mt-6 text-center">
+              <a href="#formulaire" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors duration-200">
+                Demander une expertise
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Testimonials city={city} />
+  <FAQ city={city} />
+  <ContactForm city={city} />
+  <FloatingCTA />
+  <Footer city={city} />
+</BaseLayout>

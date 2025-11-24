@@ -1,0 +1,28 @@
+{
+  "id": 9,
+  "slug": "bordeaux",
+  "name": "Bordeaux",
+  "domain": "expert-humidite-bordeaux.fr",
+  "department": "33",
+  "postalCode": "33000",
+  "region": "Nouvelle-Aquitaine",
+  "population": "Grande métropole",
+  "climate": "océanique aquitain",
+  "humidity_context": "Bords de Garonne, immeubles en pierre de calcaire tendre, échoppes bordelaises",
+  "neighborhoods": ["Saint-Pierre", "Chartrons", "Bastide", "Victoire", "Mériadeck"],
+  "nearbyTowns": [
+    "Mérignac",
+    "Pessac",
+    "Talence",
+    "Bègles",
+    "Villenave-d'Ornon",
+    "Le Bouscat",
+    "Cenon",
+    "Floirac",
+    "Lormont",
+    "Bruges",
+    "Eysines",
+    "Gradignan"
+  ],
+  "variationGroup": "A"
+}

@@ -1,0 +1,77 @@
+---
+// src/components/FloatingCTA.astro
+// CTA flottant visible uniquement sur mobile
+---
+
+<div
+  id="floating-cta"
+  class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-blue-600 shadow-2xl transform translate-y-0 transition-transform duration-300"
+  style="display: none;"
+>
+  <div class="p-4">
+    <a
+      href="#formulaire"
+      class="block w-full text-center text-white font-bold py-4 bg-blue-700 rounded-lg hover:bg-blue-800 transition-colors shadow-lg active:scale-95 transform transition-transform"
+    >
+      📝 Demander un devis gratuit
+    </a>
+  </div>
+</div>
+
+<script>
+  // Afficher le CTA après scroll
+  let lastScrollTop = 0;
+  const cta = document.getElementById('floating-cta');
+
+  if (cta) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Afficher après 300px de scroll
+      if (scrollTop > 300) {
+        cta.style.display = 'block';
+
+        // Masquer en scrollant vers le bas, afficher en remontant
+        if (scrollTop > lastScrollTop) {
+          cta.style.transform = 'translateY(100%)';
+        } else {
+          cta.style.transform = 'translateY(0)';
+        }
+      } else {
+        cta.style.display = 'none';
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, { passive: true });
+
+    // Masquer le CTA quand on arrive au formulaire
+    const formSection = document.getElementById('formulaire');
+    if (formSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            cta.style.display = 'none';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      observer.observe(formSection);
+    }
+  }
+</script>
+
+<style>
+  #floating-cta {
+    /* Animation d'entrée */
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+</style>

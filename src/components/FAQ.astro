@@ -1,0 +1,127 @@
+---
+// src/components/FAQ.astro
+import type { City } from '../types';
+import faqData from '../data/faq-bordeaux.json';
+
+interface Props {
+  city: City;
+}
+
+const { city } = Astro.props;
+
+// Schema.org FAQPage
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.faq.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+---
+
+<section id="faq" class="py-16 md:py-24 bg-gray-50">
+  <div class="container mx-auto px-4 max-w-4xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+      Questions fréquentes sur l'expertise humidité à {city.name}
+    </h2>
+
+    <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+      Vous avez des questions sur l'expertise humidité ? Voici les réponses aux interrogations les plus fréquentes de nos clients à {city.name}.
+    </p>
+
+    <!-- Schema.org JSON-LD pour la FAQ -->
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+    <!-- Questions/Réponses -->
+    <div class="space-y-6" itemscope itemtype="https://schema.org/FAQPage">
+      {faqData.faq.map((item, index) => (
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg"
+          itemscope
+          itemprop="mainEntity"
+          itemtype="https://schema.org/Question"
+        >
+          <button
+            class="w-full text-left p-6 flex justify-between items-start gap-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+            aria-expanded="false"
+            data-faq-toggle={`faq-${index}`}
+          >
+            <h3 class="text-lg font-semibold text-gray-900 flex-1" itemprop="name">
+              {item.question}
+            </h3>
+            <svg
+              class="w-6 h-6 text-blue-600 flex-shrink-0 transform transition-transform duration-200"
+              data-faq-icon={`faq-${index}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            id={`faq-${index}`}
+            class="hidden px-6 pb-6"
+            itemscope
+            itemprop="acceptedAnswer"
+            itemtype="https://schema.org/Answer"
+          >
+            <div class="prose prose-blue max-w-none">
+              <p class="text-gray-700 leading-relaxed" itemprop="text">
+                {item.answer}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA après FAQ -->
+    <div class="mt-12 text-center">
+      <p class="text-gray-600 mb-6">
+        Vous avez d'autres questions ? Contactez-nous directement !
+      </p>
+      <a
+        href="#formulaire"
+        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl"
+      >
+        Poser ma question
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Script pour l'accordéon FAQ
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqToggles = document.querySelectorAll('[data-faq-toggle]');
+
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const targetId = toggle.getAttribute('data-faq-toggle');
+        const content = document.getElementById(targetId);
+        const icon = document.querySelector(`[data-faq-icon="${targetId}"]`);
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+        // Toggle aria-expanded
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+
+        // Toggle content visibility
+        if (content) {
+          content.classList.toggle('hidden');
+        }
+
+        // Rotate icon
+        if (icon) {
+          icon.classList.toggle('rotate-180');
+        }
+      });
+    });
+  });
+</script>

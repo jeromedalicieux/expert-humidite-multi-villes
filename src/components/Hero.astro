@@ -1,0 +1,112 @@
+---
+// src/components/Hero.astro
+import type { City } from '../types';
+
+interface Props {
+  city: City;
+}
+
+const { city } = Astro.props;
+---
+
+<section class="relative bg-gradient-to-br from-blue-50 to-blue-100 py-16 md:py-24">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Contenu -->
+      <div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          Expert Humidité à <span class="text-blue-600">{city.name}</span>
+        </h1>
+
+        <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+          Diagnostic & Expertise Professionnelle
+        </p>
+
+        <p class="text-lg text-gray-600 mb-8">
+          Pour aller à l'essentiel : face à un problème d'humidité à {city.name},
+          la seule démarche efficace est un <strong>diagnostic professionnel avant tout traitement</strong>.
+          Cette expertise identifie la cause exacte (remontées capillaires, condensation, infiltrations)
+          pour garantir une solution adaptée et pérenne.
+        </p>
+
+        <!-- Réassurance -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+          <div class="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm">
+            <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-sm font-semibold text-gray-700">Expert certifié</span>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm">
+            <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span class="text-sm font-semibold text-gray-700">Intervention rapide</span>
+          </div>
+
+          <div class="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm">
+            <svg class="w-8 h-8 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            <span class="text-sm font-semibold text-gray-700">Devis gratuit</span>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#formulaire"
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition-all duration-200 hover:shadow-xl text-center"
+          >
+            📝 Demander un devis gratuit
+          </a>
+
+          <a
+            href="#presentation"
+            class="inline-block bg-white hover:bg-gray-50 text-blue-600 font-bold py-4 px-8 rounded-lg shadow-md transition-all duration-200 border-2 border-blue-600 text-center"
+          >
+            En savoir plus
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hidden md:block">
+        <div class="relative">
+          <!-- Placeholder image avec dégradé en attendant la vraie photo -->
+          <div class="rounded-2xl shadow-2xl w-full aspect-[4/3] bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center overflow-hidden relative">
+            <!-- Icône illustrative -->
+            <div class="text-white/20 transform scale-150">
+              <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <!-- Texte overlay -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center text-white">
+                <svg class="w-20 h-20 mx-auto mb-4 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+                <p class="text-xl font-bold mb-2">Expert en diagnostic</p>
+                <p class="text-sm opacity-90">Humidité • Infiltrations • Moisissures</p>
+              </div>
+            </div>
+          </div>
+          <!-- Badge expérience -->
+          <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-xl shadow-xl">
+            <p class="text-3xl font-bold mb-1">15+</p>
+            <p class="text-sm">Années d'expérience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vague de séparation -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+      <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+    </svg>
+  </div>
+</section>

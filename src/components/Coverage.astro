@@ -1,0 +1,154 @@
+---
+// src/components/Coverage.astro
+interface Props {
+  city: {
+    name: string;
+    department: string;
+    region: string;
+    neighborhoods: string[];
+  };
+}
+
+const { city } = Astro.props;
+---
+
+<section id="zone-intervention" class="py-16 md:py-24 bg-gray-50">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+      Expert humidité intervenant à {city.name} et ses environs
+    </h2>
+
+    <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+      Une intervention rapide et professionnelle dans toute la ville et son agglomération
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <!-- Carte visuelle de la zone -->
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900">Zone d'intervention principale</h3>
+            <p class="text-sm text-gray-600">{city.name} et agglomération</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-1">Ville principale</h4>
+              <p class="text-gray-600">{city.name} - Tous quartiers</p>
+            </div>
+          </div>
+
+          {city.neighborhoods && city.neighborhoods.length > 0 && (
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Quartiers couverts</h4>
+                <div class="flex flex-wrap gap-2">
+                  {city.neighborhoods.map((neighborhood) => (
+                    <span class="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full">
+                      {neighborhood}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div class="flex items-start gap-3">
+            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-1">Département</h4>
+              <p class="text-gray-600">Tout le département {city.department} et départements limitrophes</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+            <div>
+              <h4 class="font-bold text-gray-900 mb-1">Région</h4>
+              <p class="text-gray-600">{city.region}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Informations complémentaires -->
+      <div class="space-y-6">
+        <!-- Délais d'intervention -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900">Délais d'intervention</h3>
+          </div>
+          <div class="space-y-3 text-gray-600">
+            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+              <span>Centre-ville {city.name}</span>
+              <span class="font-bold text-green-600">24-48h</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+              <span>Agglomération</span>
+              <span class="font-bold text-green-600">48-72h</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span>Départements limitrophes</span>
+              <span class="font-bold text-blue-600">3-5 jours</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avantages proximité -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">Pourquoi choisir un expert local ?</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-600">Connaissance du climat et du bâti local de {city.name}</span>
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-600">Intervention rapide en cas d'urgence</span>
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-600">Pas de frais de déplacement excessifs</span>
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-600">Suivi personnalisé après l'expertise</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl shadow-lg p-6 text-white text-center">
+          <h3 class="text-xl font-bold mb-2">Besoin d'une expertise ?</h3>
+          <p class="text-blue-100 mb-4">Nous intervenons rapidement à {city.name}</p>
+          <a href="#formulaire" class="inline-block bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+            Demander un devis gratuit
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
