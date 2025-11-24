@@ -10,13 +10,16 @@ import ContactForm from '../components/ContactForm.astro';
 import FloatingCTA from '../components/FloatingCTA.astro';
 import Footer from '../components/Footer.astro';
 
-import cityData from '../data/bordeaux.json';
+import { detectCityFromDomain, loadCityData, generateSEOTitle, generateSEODescription } from '../utils/domain-detection';
 
-const city = cityData;
+// Détection automatique de la ville en fonction du domaine
+const hostname = Astro.url.hostname;
+const citySlug = detectCityFromDomain(hostname);
+const city = await loadCityData(citySlug);
 
-// Génér le titre et la description SEO
-const title = `Expert Humidité ${city.name} | Diagnostic & Expertise Professionnelle 💧`;
-const description = `Expertise humidité à ${city.name} ✓ Diagnostic précis ✓ Rapport détaillé ✓ Expert indépendant ✓ Devis gratuit ☎ Intervention ${city.department}`;
+// Génération automatique du titre et de la description SEO
+const title = generateSEOTitle(city);
+const description = generateSEODescription(city);
 ---
 
 <BaseLayout title={title} description={description} city={city}>
