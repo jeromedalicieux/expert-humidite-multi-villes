@@ -1,43 +1,233 @@
-# Astro Starter Kit: Minimal
+# Expert Humidité - Générateur Multi-Villes
 
-```sh
-npm create astro@latest -- --template minimal
+Site web de référence pour l'expertise humidité en France, déployé sur 44 villes avec détection automatique du domaine.
+
+## 🎯 Projet
+
+Générateur de sites web SEO-optimisés pour experts en diagnostic humidité dans 44 grandes villes françaises.
+
+**Architecture** : 1 repository → 1 site Netlify → 44 domaines
+
+Chaque domaine (`expert-humidite-[ville].fr`) affiche automatiquement le contenu personnalisé pour sa ville.
+
+---
+
+## ✨ Features
+
+- ✅ **Détection automatique de la ville** par domaine
+- ✅ **SEO ultra-optimisé** (Schema.org, Open Graph, Twitter Cards)
+- ✅ **Design responsive** mobile-first
+- ✅ **Performance maximale** (Astro SSG)
+- ✅ **HTTPS automatique** via Netlify
+- ✅ **Multi-domaines** (44 sites sur 1 seul déploiement)
+- ✅ **Formulaire de contact** intégré (Tally)
+- ✅ **Villes limitrophes** pour SEO local
+
+---
+
+## 🚀 Quick Start
+
+### Installation locale
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Le site sera accessible sur `http://localhost:4321/`
 
-## 🚀 Project Structure
+### Build de production
 
-Inside of your Astro project, you'll see the following folders and files:
+```bash
+npm run build
+npm run preview
+```
 
-```text
-/
-├── public/
+---
+
+## 📦 Structure du Projet
+
+```
+expert-humidite-bordeaux/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/          # Composants Astro
+│   │   ├── Hero.astro       # Section hero avec CTA
+│   │   ├── Process.astro    # Processus en 4 étapes
+│   │   ├── Coverage.astro   # Zone d'intervention
+│   │   ├── Testimonials.astro  # Témoignages clients
+│   │   ├── FAQ.astro        # Questions fréquentes
+│   │   ├── ContactForm.astro   # Formulaire Tally
+│   │   ├── FloatingCTA.astro   # CTA flottant mobile
+│   │   └── Footer.astro     # Pied de page
+│   ├── layouts/
+│   │   └── BaseLayout.astro # Layout principal avec SEO
+│   ├── pages/
+│   │   └── index.astro      # Page d'accueil
+│   ├── data/                # Données JSON par ville
+│   │   ├── bordeaux.json    # ✅ Données Bordeaux
+│   │   └── [43 autres villes à créer]
+│   ├── utils/
+│   │   ├── domain-detection.ts  # Détection de la ville
+│   │   └── schema.ts        # Générateurs Schema.org
+│   └── types.ts             # Types TypeScript
+├── public/                  # Assets statiques
+├── scripts/                 # Scripts d'automatisation
+│   ├── add-netlify-domains.sh   # Ajouter 44 domaines via API
+│   └── verify-domains.sh    # Vérifier DNS et HTTPS
+├── netlify.toml             # Configuration Netlify
+└── README.md                # Ce fichier
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🌍 Villes Supportées
 
-Any static assets, like images, can be placed in the `public/` directory.
+**1 ville complète actuellement** :
+- ✅ Bordeaux (avec données JSON complètes)
 
-## 🧞 Commands
+**43 villes à compléter** (Phase 2) :
+Paris, Lyon, Marseille, Toulouse, Nice, Nantes, Strasbourg, Montpellier, Lille, Rennes, Reims, Saint-Étienne, Toulon, Grenoble, Dijon, Angers, Nîmes, Villeurbanne, Clermont-Ferrand, Le Mans, Aix-en-Provence, Brest, Tours, Amiens, Limoges, Annecy, Perpignan, Boulogne-Billancourt, Metz, Besançon, Orléans, Saint-Denis, Argenteuil, Rouen, Mulhouse, Montreuil, Caen, Nancy, Tourcoing, Roubaix, Vitry-sur-Seine, Avignon, Poitiers.
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🚀 Déploiement sur Netlify
 
-## 👀 Want to learn more?
+### Option 1 : Quick Start (Rapide)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Suivre le guide : **[QUICK-START-NETLIFY.md](./QUICK-START-NETLIFY.md)**
+
+⏱️ Déploiement en 10 minutes
+
+### Option 2 : Guide Détaillé
+
+Suivre le guide complet : **[NETLIFY-DEPLOY-GUIDE.md](./NETLIFY-DEPLOY-GUIDE.md)**
+
+📖 Toutes les étapes expliquées en détail
+
+### Configuration DNS
+
+Une fois le site déployé sur Netlify, configurer les DNS :
+
+👉 **[DNS-CONFIGURATION.md](./DNS-CONFIGURATION.md)**
+
+Instructions spécifiques pour OVH, Gandi, O2Switch, Infomaniak, etc.
+
+---
+
+## 🛠️ Scripts Utiles
+
+### Ajouter automatiquement les 44 domaines sur Netlify
+
+```bash
+export NETLIFY_SITE_ID="votre-site-id"
+export NETLIFY_TOKEN="votre-token-api"
+./scripts/add-netlify-domains.sh
+```
+
+### Vérifier tous les domaines (DNS + HTTPS)
+
+```bash
+./scripts/verify-domains.sh
+```
+
+---
+
+## 🧞 Commandes NPM
+
+| Commande | Action |
+|----------|--------|
+| `npm install` | Installer les dépendances |
+| `npm run dev` | Serveur dev sur `localhost:4321` |
+| `npm run build` | Build de production dans `./dist/` |
+| `npm run preview` | Prévisualiser le build en local |
+| `npm run astro check` | Vérifier les erreurs TypeScript |
+
+---
+
+## 🏗️ Architecture Multi-Domaines
+
+### Comment ça fonctionne ?
+
+1. **Détection du domaine** : `domain-detection.ts` détecte le hostname
+2. **Chargement des données** : Import dynamique du JSON correspondant
+3. **Rendu personnalisé** : Chaque composant utilise les données de la ville
+
+**Exemple** :
+```typescript
+// src/utils/domain-detection.ts
+const hostname = Astro.url.hostname;  // "expert-humidite-paris.fr"
+const citySlug = detectCityFromDomain(hostname);  // "paris"
+const city = await loadCityData(citySlug);  // Import de paris.json
+```
+
+### Fallback
+
+Si le JSON de la ville n'existe pas, le système fallback sur `bordeaux.json`.
+
+---
+
+## 📊 SEO & Schema.org
+
+Chaque page inclut automatiquement :
+
+- ✅ **LocalBusiness** (nom, adresse, téléphone, zone)
+- ✅ **Service** (description du service d'expertise)
+- ✅ **FAQPage** (questions fréquentes structurées)
+- ✅ **BreadcrumbList** (fil d'Ariane)
+- ✅ **WebSite** (informations générales du site)
+- ✅ **Open Graph** (partage réseaux sociaux)
+- ✅ **Twitter Cards** (prévisualisation Twitter)
+- ✅ **AggregateRating** (note moyenne 4.9/5)
+
+---
+
+## 🎨 Technologies
+
+- **[Astro 5.16.0](https://astro.build)** - Générateur de sites statiques
+- **[Tailwind CSS v4.1.17](https://tailwindcss.com)** - Framework CSS
+- **[TypeScript](https://www.typescriptlang.org/)** - Typage statique
+- **[Netlify](https://www.netlify.com/)** - Hébergement et CDN
+- **[Tally](https://tally.so/)** - Formulaire de contact
+
+---
+
+## 📝 Phase 2 : Génération Multi-Villes
+
+**Prochaines étapes** :
+
+1. Créer les 43 fichiers JSON restants (`src/data/[ville].json`)
+2. Implémenter le système de variations anti-duplicate (groupes A, B, C)
+3. Créer les FAQ personnalisées par ville
+4. Ajouter des images réelles pour remplacer les placeholders
+5. Configurer les DNS pour tous les domaines
+6. Soumettre chaque site à Google Search Console
+
+---
+
+## 🔒 Sécurité
+
+Headers configurés dans `netlify.toml` :
+
+- `X-Frame-Options: DENY` (protection clickjacking)
+- `X-XSS-Protection: 1; mode=block`
+- `X-Content-Type-Options: nosniff`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+
+---
+
+## 📞 Support
+
+- **Documentation Astro** : https://docs.astro.build
+- **Documentation Netlify** : https://docs.netlify.com
+- **Repository GitHub** : https://github.com/jeromedalicieux/expert-humidite-multi-villes
+
+---
+
+## 📄 Licence
+
+Projet privé - Tous droits réservés
+
+---
+
+**Créé avec ❤️ en utilisant Astro + Tailwind CSS**
