@@ -1,0 +1,24 @@
+{
+  "id": 4,
+  "slug": "toulouse",
+  "name": "Toulouse",
+  "domain": "expert-humidite-toulouse.fr",
+  "department": "31",
+  "postalCode": "31000",
+  "region": "Occitanie",
+  "population": "Grande métropole",
+  "climate": "océanique dégradé",
+  "humidity_context": "Bords de Garonne, climat pluvieux, maisons à colombages, immeubles en brique rose",
+  "neighborhoods": ["Capitole", "Carmes", "Saint-Cyprien", "Compans-Caffarelli", "Minimes"],
+  "nearbyTowns": [
+    "Blagnac",
+    "Colomiers",
+    "Tournefeuille",
+    "Balma",
+    "L'Union",
+    "Ramonville-Saint-Agne",
+    "Cugnaux",
+    "Plaisance-du-Touch"
+  ],
+  "variationGroup": "B"
+}

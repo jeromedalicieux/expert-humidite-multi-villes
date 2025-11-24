@@ -5,6 +5,8 @@ import type { City } from '../types';
 const DOMAIN_TO_CITY_MAP: Record<string, string> = {
   'expert-humidite-bordeaux.fr': 'bordeaux',
   'www.expert-humidite-bordeaux.fr': 'bordeaux',
+  'expert-humidite-toulouse.fr': 'toulouse',
+  'www.expert-humidite-toulouse.fr': 'toulouse',
   'expert-humidite-paris.fr': 'paris',
   'www.expert-humidite-paris.fr': 'paris',
   'expert-humidite-marseille.fr': 'marseille',

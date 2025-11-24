@@ -1,19 +1,30 @@
 ---
 // src/components/FAQ.astro
 import type { City } from '../types';
-import faqData from '../data/faq-bordeaux.json';
 
 interface Props {
   city: City;
 }
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FAQData {
+  faq: FAQItem[];
+}
+
 const { city } = Astro.props;
+
+// Charger dynamiquement la FAQ de la ville
+const faqData: FAQData = await import(`../data/faq-${city.slug}.json`);
 
 // Schema.org FAQPage
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": faqData.faq.map(item => ({
+  "mainEntity": faqData.faq.map((item: FAQItem) => ({
     "@type": "Question",
     "name": item.question,
     "acceptedAnswer": {
@@ -39,7 +50,7 @@ const faqSchema = {
 
     <!-- Questions/Réponses -->
     <div class="space-y-6" itemscope itemtype="https://schema.org/FAQPage">
-      {faqData.faq.map((item, index) => (
+      {faqData.faq.map((item: FAQItem, index: number) => (
         <div
           class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg"
           itemscope
