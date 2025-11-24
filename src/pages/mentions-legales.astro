@@ -1,0 +1,203 @@
+---
+// src/pages/mentions-legales.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Footer from '../components/Footer.astro';
+
+import { detectCityFromDomain, loadCityData } from '../utils/domain-detection';
+
+const hostname = Astro.url.hostname;
+const citySlug = detectCityFromDomain(hostname);
+const city = await loadCityData(citySlug);
+
+const title = `Mentions Légales - Expert Humidité ${city.name}`;
+const description = `Mentions légales du site Expert Humidité ${city.name}. Informations sur l'éditeur, l'hébergement et les conditions d'utilisation.`;
+---
+
+<BaseLayout title={title} description={description} city={city}>
+  <div class="bg-gray-50 py-16 md:py-24">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+        Mentions Légales
+      </h1>
+
+      <div class="bg-white rounded-xl shadow-lg p-8 space-y-8">
+
+        <!-- 1. Présentation du site -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Présentation du site web</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Conformément à la loi n° 2004-2005 du 21 juin 2004 pour la confiance dans l'économie numérique,
+              le site web <strong>{city.domain}</strong> met à disposition du public les informations concernant son entreprise.
+            </p>
+            <p>
+              Ces informations pouvant être modifiées, nous vous invitons à consulter les mentions légales régulièrement
+              pour en prendre connaissance fréquemment.
+            </p>
+            <p>
+              Le site <strong>{city.domain}</strong> appartient à <strong>Expert Humidité {city.name}</strong>.
+            </p>
+            <p>
+              Le responsable de la publication et de l'administration du site est Expert Humidité {city.name}.
+              Vous pouvez nous contacter via le formulaire de contact disponible sur le site.
+            </p>
+            <p>
+              Le site <strong>{city.domain}</strong> est hébergé par <strong>Netlify, Inc.</strong>,
+              dont le siège social est localisé à l'adresse suivante : 44 Montgomery Street, Suite 300,
+              San Francisco, CA 94104, États-Unis, <a href="https://www.netlify.com" target="_blank" rel="noopener" class="text-blue-600 hover:underline">www.netlify.com</a>.
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. Conditions générales d'utilisation -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Conditions générales d'utilisation du site et des services proposés</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              En utilisant le site web <strong>{city.domain}</strong>, vous acceptez pleinement et entièrement
+              les conditions générales d'utilisation précisées dans nos mentions légales. Accessible à tout type de visiteurs,
+              il est important de préciser qu'une interruption pour maintenance du site web peut être décidée par Expert Humidité {city.name}.
+            </p>
+          </div>
+        </section>
+
+        <!-- 3. Services proposés -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Les services proposés par {city.domain}</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              En accord avec sa politique de communication, le site <strong>{city.domain}</strong> a pour vocation
+              d'informer les utilisateurs sur les services d'expertise en humidité proposés par Expert Humidité {city.name},
+              qui s'efforce de fournir des informations précises sur son activité.
+            </p>
+            <p>
+              Cependant, des inexactitudes ou des omissions peuvent exister : la société ne pourra en aucun cas être tenue
+              pour responsable pour toute erreur présente sur le site <strong>{city.domain}</strong>.
+            </p>
+          </div>
+        </section>
+
+        <!-- 4. Limitations contractuelles -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Limitations contractuelles</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Les informations retranscrites sur notre site web <strong>{city.domain}</strong> font l'objet de démarches
+              qualitatives pour nous assurer de leur fiabilité. Cependant, nous ne pourrons encourir de responsabilités
+              en cas d'inexactitudes techniques dans nos explications.
+            </p>
+            <p>
+              Si vous constatez une erreur concernant des informations que nous aurions pu omettre,
+              n'hésitez pas à nous le signaler via notre formulaire de contact.
+            </p>
+          </div>
+        </section>
+
+        <!-- 5. Propriété intellectuelle -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Propriété intellectuelle et contenu du site Internet</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Le contenu rédactionnel du site web <strong>{city.domain}</strong> appartient exclusivement à
+              Expert Humidité {city.name}. Toute reproduction, distribution, modification, adaptation, retransmission
+              ou publication de ces différents éléments est strictement interdite sans l'accord exprès par écrit de
+              Expert Humidité {city.name}.
+            </p>
+            <p>
+              En naviguant sur le site <strong>{city.domain}</strong>, l'utilisateur accepte également l'installation
+              éventuelle de cookies sur son ordinateur.
+            </p>
+          </div>
+        </section>
+
+        <!-- 6. Données personnelles -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Données personnelles, respect de votre vie privée et de vos libertés</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi « Informatique et Libertés »
+              du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation,
+              de portabilité et d'opposition aux données personnelles vous concernant.
+            </p>
+            <p>
+              Les informations recueillies sur ce site sont à destination unique de Expert Humidité {city.name} et ne sont
+              en aucun cas cédées à des tiers. Ces données sont celles que vous aurez volontairement enregistrées lors de
+              vos demandes de contact via notre formulaire.
+            </p>
+            <p>
+              Les informations collectées peuvent comprendre des données personnelles comme votre adresse IP,
+              le numéro d'identification attribué à un ordinateur connecté à un réseau Internet.
+            </p>
+            <p>
+              Pour exercer ces droits ou pour toute question sur le traitement de vos données,
+              vous pouvez nous contacter via notre formulaire de contact.
+            </p>
+          </div>
+        </section>
+
+        <!-- 7. Cookies -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Cookies</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Le site <strong>{city.domain}</strong> peut être amené à vous demander l'acceptation des cookies pour des besoins
+              de statistiques et d'affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site
+              que vous visitez.
+            </p>
+            <p>
+              Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur
+              accède pour lire et enregistrer des informations. Certaines parties de ce site ne peuvent être fonctionnelles sans
+              l'acceptation de cookies.
+            </p>
+          </div>
+        </section>
+
+        <!-- 8. Droit applicable -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Droit applicable et lois concernées</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Soumis au droit français, le site web <strong>{city.domain}</strong> est encadré par :
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>La loi n° 2004-2005 du 21 juin 2004 pour la confiance dans l'économie numérique</li>
+              <li>L'article L.335-2 du Code de la Propriété Intellectuelle</li>
+              <li>La loi « informatique et libertés » du 6 janvier 1978 modifiée en 2004</li>
+              <li>Le Règlement Général sur la Protection des Données (RGPD) - Règlement UE 2016/679</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 9. Contact -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Contact</h2>
+          <div class="prose prose-lg max-w-none text-gray-700">
+            <p>
+              Pour toute question concernant ces mentions légales, nos services ou pour exercer vos droits concernant
+              vos données personnelles, vous pouvez nous contacter via le <a href="/#formulaire" class="text-blue-600 hover:underline">formulaire de contact</a>
+              disponible sur notre site.
+            </p>
+          </div>
+        </section>
+
+        <!-- Date de mise à jour -->
+        <div class="pt-8 border-t border-gray-200">
+          <p class="text-sm text-gray-500 text-center">
+            Dernière mise à jour : {new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Retour à l'accueil -->
+      <div class="mt-8 text-center">
+        <a href="/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200">
+          Retour à l'accueil
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <Footer city={city} />
+</BaseLayout>

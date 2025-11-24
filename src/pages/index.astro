@@ -3,6 +3,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Process from '../components/Process.astro';
+import Gallery from '../components/Gallery.astro';
 import Coverage from '../components/Coverage.astro';
 import Testimonials from '../components/Testimonials.astro';
 import FAQ from '../components/FAQ.astro';
@@ -180,6 +181,7 @@ const description = generateSEODescription(city);
   </section>
 
   <Process city={city} />
+  <Gallery city={city} />
   <Coverage city={city} />
 
   <!-- Section Villes limitrophes (SEO Local) -->
