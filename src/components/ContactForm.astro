@@ -8,9 +8,8 @@ interface Props {
 
 const { city } = Astro.props;
 
-// URL Tally avec paramètres (à remplacer par votre vrai ID)
-const tallyFormId = import.meta.env.TALLY_FORM_ID || 'ABC123';
-const tallyURL = `https://tally.so/r/${tallyFormId}?ville=${city.slug}&source=${city.domain}&utm_source=website&utm_medium=form&utm_campaign=${city.slug}`;
+// URL du formulaire - pattern : https://form.expert-humidite-[ville].fr/devis-gratuit
+const formURL = `https://form.expert-humidite-${city.slug}.fr/devis-gratuit`;
 ---
 
 <section id="formulaire" class="py-16 md:py-24 bg-white">
@@ -25,9 +24,9 @@ const tallyURL = `https://tally.so/r/${tallyFormId}?ville=${city.slug}&source=${
     </p>
 
     <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-2xl p-8 border border-blue-100">
-      <!-- Iframe Tally -->
+      <!-- Iframe formulaire -->
       <iframe
-        src={tallyURL}
+        src={formURL}
         width="100%"
         height="600"
         frameborder="0"
