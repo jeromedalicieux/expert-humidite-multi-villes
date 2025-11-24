@@ -77,6 +77,12 @@ const description = generateSEODescription(city);
     </div>
   </section>
 
+  <!-- Galerie photos des problèmes d'humidité -->
+  <Gallery city={city} />
+
+  <!-- Tarifs et couverture géographique -->
+  <Coverage city={city} />
+
   <!-- Section Types de problèmes -->
   <section class="py-16 md:py-24 bg-gray-50">
     <div class="container mx-auto px-4 max-w-6xl">
@@ -181,8 +187,6 @@ const description = generateSEODescription(city);
   </section>
 
   <Process city={city} />
-  <Gallery city={city} />
-  <Coverage city={city} />
 
   <!-- Section Villes limitrophes (SEO Local) -->
   {city.nearbyTowns && city.nearbyTowns.length > 0 && (
