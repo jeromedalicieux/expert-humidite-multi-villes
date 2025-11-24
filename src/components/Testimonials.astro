@@ -9,34 +9,34 @@ interface Props {
 
 const { city } = Astro.props;
 
-// Témoignages avec quartiers locaux si disponibles
+// Témoignages avec ville uniquement (pas de quartier)
 const testimonials = [
   {
     name: "Marie L.",
-    location: city.neighborhoods?.[0] || city.name,
+    location: city.name,
     rating: 5,
-    text: "Expert très professionnel qui a su identifier rapidement l'origine des remontées capillaires dans ma maison. Rapport détaillé avec photos et solutions concrètes. Je recommande vivement.",
+    text: "Expert indépendant très professionnel qui a su identifier rapidement l'origine des remontées capillaires dans ma maison. Rapport détaillé sous 10 jours avec photos et solutions concrètes. Je recommande vivement.",
     problem: "Remontées capillaires"
   },
   {
     name: "Thomas B.",
-    location: city.neighborhoods?.[1] || city.name,
+    location: city.name,
     rating: 5,
-    text: "Intervention rapide et diagnostic précis. Les préconisations ont permis de résoudre définitivement nos problèmes de moisissures dans la salle de bain. Excellent suivi.",
+    text: "Intervention rapide et diagnostic précis. Les préconisations ont permis de résoudre définitivement nos problèmes de moisissures dans notre appartement. Excellent suivi.",
     problem: "Moisissures"
   },
   {
     name: "Sophie D.",
-    location: city.neighborhoods?.[2] || city.name,
+    location: city.name,
     rating: 5,
-    text: "Nous avions des infiltrations suite à un dégât des eaux. L'expert nous a accompagnés dans le dossier d'assurance. Son expertise a été déterminante pour notre indemnisation.",
+    text: "Nous avions des infiltrations dans notre immeuble. L'expert nous a fourni un rapport complet qui nous a permis de faire les travaux nécessaires en toute confiance.",
     problem: "Infiltrations"
   },
   {
     name: "Jean-Pierre M.",
-    location: city.neighborhoods?.[3] || city.name,
+    location: city.name,
     rating: 5,
-    text: "Très satisfait de la prestation. L'expert a pris le temps d'expliquer les causes du problème et les solutions possibles. Rapport reçu en 48h comme promis.",
+    text: "Très satisfait de la prestation. L'expert indépendant a pris le temps d'expliquer les causes du problème et les solutions possibles. Rapport très professionnel.",
     problem: "Condensation"
   }
 ];
@@ -96,18 +96,14 @@ const testimonials = [
 
     {/* Statistiques */}
     <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
         <div>
-          <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">500+</div>
+          <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">5000+</div>
           <div class="text-sm text-gray-600">Expertises réalisées</div>
         </div>
         <div>
           <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">98%</div>
           <div class="text-sm text-gray-600">Clients satisfaits</div>
-        </div>
-        <div>
-          <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">48h</div>
-          <div class="text-sm text-gray-600">Délai moyen rapport</div>
         </div>
         <div>
           <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">15+</div>
