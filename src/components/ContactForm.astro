@@ -27,10 +27,10 @@ const formURL = `https://form.expert-humidite-${city.slug}.fr/devis-gratuit?sour
 
     <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-2xl p-8 border border-blue-100">
       <!-- Iframe formulaire avec IframeResizer -->
-      <div id="form-container" class="rounded-lg overflow-hidden" style="min-height: 340px;">
+      <div id="form-container" class="rounded-lg overflow-hidden" style="min-height: 290px;">
         <iframe
           src={formURL}
-          style="width: 100%; height: calc(70vh - 80px); border: none;"
+          style="width: 100%; height: calc(70vh - 130px); border: none;"
           title={`Formulaire de contact - Expert Humidité ${city.name}`}
           loading="lazy"
           class="rounded-lg"
