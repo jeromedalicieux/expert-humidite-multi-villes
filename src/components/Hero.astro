@@ -74,29 +74,94 @@ const { city } = Astro.props;
       <!-- Image -->
       <div class="hidden md:block">
         <div class="relative">
-          <!-- Placeholder image avec dégradé en attendant la vraie photo -->
-          <div class="rounded-2xl shadow-2xl w-full aspect-[4/3] bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center overflow-hidden relative">
-            <!-- Icône illustrative -->
-            <div class="text-white/20 transform scale-150">
-              <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-            </div>
-            <!-- Texte overlay -->
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="text-center text-white">
-                <svg class="w-20 h-20 mx-auto mb-4 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                </svg>
-                <p class="text-xl font-bold mb-2">Expert en diagnostic</p>
-                <p class="text-sm opacity-90">Humidité • Infiltrations • Moisissures</p>
-              </div>
-            </div>
-          </div>
-          <!-- Badge expérience -->
-          <div class="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-xl shadow-xl">
-            <p class="text-3xl font-bold mb-1">15+</p>
-            <p class="text-sm">Années d'expérience</p>
+          <!-- Illustration diagnostic humidité -->
+          <div class="rounded-2xl shadow-2xl w-full aspect-[4/3] bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center overflow-hidden relative p-8">
+            <!-- SVG Maison avec problèmes d'humidité -->
+            <svg class="w-full h-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Maison principale -->
+              <g opacity="0.9">
+                <!-- Toit -->
+                <path d="M200 60 L320 140 L320 160 L80 160 L80 140 Z" fill="white" opacity="0.3"/>
+                <!-- Corps de la maison -->
+                <rect x="100" y="140" width="200" height="140" fill="white" opacity="0.4" rx="4"/>
+
+                <!-- Fenêtres avec condensation -->
+                <g>
+                  <!-- Fenêtre gauche -->
+                  <rect x="130" y="170" width="50" height="60" fill="white" opacity="0.6" rx="2"/>
+                  <line x1="155" y1="170" x2="155" y2="230" stroke="white" opacity="0.4" stroke-width="2"/>
+                  <line x1="130" y1="200" x2="180" y2="200" stroke="white" opacity="0.4" stroke-width="2"/>
+                  <!-- Gouttes condensation -->
+                  <circle cx="140" cy="220" r="2" fill="#60A5FA"/>
+                  <circle cx="150" cy="225" r="2" fill="#60A5FA"/>
+                  <circle cx="170" cy="220" r="2" fill="#60A5FA"/>
+
+                  <!-- Fenêtre droite -->
+                  <rect x="220" y="170" width="50" height="60" fill="white" opacity="0.6" rx="2"/>
+                  <line x1="245" y1="170" x2="245" y2="230" stroke="white" opacity="0.4" stroke-width="2"/>
+                  <line x1="220" y1="200" x2="270" y2="200" stroke="white" opacity="0.4" stroke-width="2"/>
+                  <!-- Gouttes condensation -->
+                  <circle cx="230" cy="220" r="2" fill="#60A5FA"/>
+                  <circle cx="240" cy="225" r="2" fill="#60A5FA"/>
+                  <circle cx="260" cy="220" r="2" fill="#60A5FA"/>
+                </g>
+
+                <!-- Porte -->
+                <rect x="170" y="220" width="60" height="60" fill="white" opacity="0.5" rx="2"/>
+                <circle cx="215" cy="250" r="3" fill="white" opacity="0.6"/>
+
+                <!-- Remontées capillaires (vagues en bas) -->
+                <path d="M100 250 Q110 245 120 250 Q130 255 140 250 Q150 245 160 250 Q170 255 180 250 Q190 245 200 250 Q210 255 220 250 Q230 245 240 250 Q250 255 260 250 Q270 245 280 250 Q290 255 300 250 L300 280 L100 280 Z" fill="#3B82F6" opacity="0.6"/>
+              </g>
+
+              <!-- Gouttes d'eau (infiltrations) -->
+              <g>
+                <!-- Goutte 1 (toit) -->
+                <ellipse cx="250" cy="150" rx="4" ry="6" fill="#60A5FA" opacity="0.8"/>
+                <path d="M250 144 Q247 135 250 130" stroke="#60A5FA" opacity="0.6" stroke-width="2" fill="none"/>
+
+                <!-- Goutte 2 (toit) -->
+                <ellipse cx="280" cy="155" rx="4" ry="6" fill="#60A5FA" opacity="0.8"/>
+                <path d="M280 149 Q277 140 280 135" stroke="#60A5FA" opacity="0.6" stroke-width="2" fill="none"/>
+
+                <!-- Goutte 3 (mur) -->
+                <ellipse cx="310" cy="200" rx="3" ry="5" fill="#3B82F6" opacity="0.7"/>
+
+                <!-- Moisissures (taches sombres) -->
+                <circle cx="115" cy="200" r="8" fill="#1E3A8A" opacity="0.5"/>
+                <circle cx="120" cy="210" r="6" fill="#1E3A8A" opacity="0.5"/>
+                <circle cx="110" cy="210" r="5" fill="#1E3A8A" opacity="0.5"/>
+              </g>
+
+              <!-- Hygromètre professionnel -->
+              <g transform="translate(320, 200)">
+                <rect x="0" y="0" width="50" height="60" rx="4" fill="white" opacity="0.9"/>
+                <rect x="5" y="5" width="40" height="30" rx="2" fill="#3B82F6" opacity="0.3"/>
+                <!-- Écran digital -->
+                <text x="25" y="22" text-anchor="middle" fill="white" font-size="10" font-weight="bold">HUMID</text>
+                <text x="25" y="30" text-anchor="middle" fill="#60A5FA" font-size="8">75%</text>
+                <!-- Boutons -->
+                <circle cx="15" cy="45" r="4" fill="#60A5FA" opacity="0.8"/>
+                <circle cx="35" cy="45" r="4" fill="#60A5FA" opacity="0.8"/>
+              </g>
+
+              <!-- Caméra thermique -->
+              <g transform="translate(30, 180)">
+                <rect x="0" y="0" width="45" height="35" rx="3" fill="white" opacity="0.9"/>
+                <circle cx="22.5" cy="17.5" r="10" fill="#3B82F6" opacity="0.4"/>
+                <circle cx="22.5" cy="17.5" r="6" fill="#60A5FA" opacity="0.6"/>
+                <!-- Poignée -->
+                <rect x="15" y="30" width="15" height="20" rx="2" fill="white" opacity="0.8"/>
+              </g>
+
+              <!-- Particules d'humidité ambiantes -->
+              <circle cx="50" cy="100" r="2" fill="white" opacity="0.4"/>
+              <circle cx="80" cy="120" r="2" fill="white" opacity="0.4"/>
+              <circle cx="350" cy="90" r="2" fill="white" opacity="0.4"/>
+              <circle cx="370" cy="130" r="2" fill="white" opacity="0.4"/>
+              <circle cx="60" cy="250" r="2" fill="white" opacity="0.4"/>
+              <circle cx="340" cy="240" r="2" fill="white" opacity="0.4"/>
+            </svg>
           </div>
         </div>
       </div>
