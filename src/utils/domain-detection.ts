@@ -16,8 +16,8 @@ const DOMAIN_TO_CITY_MAP: Record<string, string> = {
   // ... Les 40 autres villes seront ajoutées
 
   // Domaines de développement
-  'localhost': 'bordeaux',
-  'localhost:4321': 'bordeaux',
+  'localhost': 'toulouse',
+  'localhost:4321': 'toulouse',
 };
 
 /**
@@ -44,12 +44,12 @@ export function detectCityFromDomain(hostname: string): string {
 
   // Domaine Netlify preview
   if (normalizedHost.includes('.netlify.app')) {
-    // Par défaut, afficher Bordeaux pour les previews
-    return 'bordeaux';
+    // Par défaut, afficher Toulouse pour les previews
+    return 'toulouse';
   }
 
-  // Par défaut, Bordeaux
-  return 'bordeaux';
+  // Par défaut, Toulouse
+  return 'toulouse';
 }
 
 /**
