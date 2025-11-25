@@ -61,19 +61,31 @@ create_dns_record() {
             \"proxied\": true
         }" | jq -r '.success' > /dev/null
 
-    # Créer enregistrement pour www
+    # Créer enregistrement pour www → pointe vers Netlify
     curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" \
         -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
         -H "Content-Type: application/json" \
         --data "{
             \"type\": \"CNAME\",
             \"name\": \"www\",
-            \"content\": \"$DOMAIN\",
+            \"content\": \"$NETLIFY_SITE.netlify.app\",
             \"ttl\": 1,
             \"proxied\": true
         }" | jq -r '.success' > /dev/null
 
-    echo "   ✅ DNS configuré pour $DOMAIN"
+    # Créer enregistrement pour form → pointe vers Tally
+    curl -s -X POST "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records" \
+        -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+        -H "Content-Type: application/json" \
+        --data "{
+            \"type\": \"CNAME\",
+            \"name\": \"form\",
+            \"content\": \"cname.tally.so\",
+            \"ttl\": 1,
+            \"proxied\": false
+        }" | jq -r '.success' > /dev/null
+
+    echo "   ✅ DNS configuré pour $DOMAIN (@ + www + form)"
 }
 
 # Lire le fichier cities
