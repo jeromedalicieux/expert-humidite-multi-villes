@@ -1,0 +1,19 @@
+{
+  "slug": "argenteuil",
+  "name": "Argenteuil",
+  "department": "Val-d'Oise",
+  "region": "Île-de-France",
+  "zipCode": "95100",
+  "population": "110000",
+  "climate": "océanique dégradé",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Val d'Argent",
+    "Joliot-Curie",
+    "Orgemont"
+  ],
+  "seo": {
+    "title": "Expert Humidité Argenteuil | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Argenteuil (95100). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

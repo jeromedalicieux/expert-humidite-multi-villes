@@ -1,0 +1,19 @@
+{
+  "slug": "le-mans",
+  "name": "Le Mans",
+  "department": "Sarthe",
+  "region": "Pays de la Loire",
+  "zipCode": "72000",
+  "population": "144000",
+  "climate": "océanique dégradé",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Pontlieue",
+    "Sablons",
+    "Californie"
+  ],
+  "seo": {
+    "title": "Expert Humidité Le Mans | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Le Mans (72000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

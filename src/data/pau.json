@@ -1,0 +1,33 @@
+{
+  "id": 41,
+  "slug": "pau",
+  "name": "Pau",
+  "domain": "expert-humidite-pau.fr",
+  "department": "64",
+  "postalCode": "64000",
+  "region": "Nouvelle-Aquitaine",
+  "population": "Grande ville",
+  "climate": "océanique",
+  "humidity_context": "Pyrénées, gave de Pau, boulevard des Pyrénées",
+  "neighborhoods": [
+    "Centre-ville",
+    "Trespoey",
+    "Ousse-des-Bois",
+    "Saragosse"
+  ],
+  "nearbyTowns": [
+    "Billère",
+    "Lons",
+    "Jurançon",
+    "Lescar",
+    "Bizanos",
+    "Gelos",
+    "Mazères-Lezons",
+    "Idron",
+    "Narcastet",
+    "Gan",
+    "Sendets",
+    "Artiguelouve"
+  ],
+  "variationGroup": "A"
+}

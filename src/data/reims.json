@@ -1,0 +1,33 @@
+{
+  "id": 12,
+  "slug": "reims",
+  "name": "Reims",
+  "domain": "expert-humidite-reims.fr",
+  "department": "51",
+  "postalCode": "51100",
+  "region": "Grand Est",
+  "population": "Grande ville",
+  "climate": "océanique dégradé",
+  "humidity_context": "Vesle, craie, caves champenoises, humidité",
+  "neighborhoods": [
+    "Centre-ville",
+    "Cathédrale",
+    "Croix-Rouge",
+    "Europe"
+  ],
+  "nearbyTowns": [
+    "Bétheny",
+    "Cormontreuil",
+    "Tinqueux",
+    "Saint-Brice-Courcelles",
+    "Witry-lès-Reims",
+    "Taissy",
+    "Bezannes",
+    "Champigny",
+    "Champfleury",
+    "Cernay-lès-Reims",
+    "Muizon",
+    "Trois-Puits"
+  ],
+  "variationGroup": "B"
+}

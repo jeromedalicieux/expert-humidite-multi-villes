@@ -1,32 +1,27 @@
 #!/bin/bash
-# Script de déploiement automatique des 44 builds sur Netlify
-# Prérequis : avoir exécuté ./scripts/build-all-cities.sh
-# Usage: ./scripts/deploy-builds-to-netlify.sh
+# Déploiement des builds sur les sites Netlify existants
+# Prérequis: NETLIFY_AUTH_TOKEN défini
+# Usage: export NETLIFY_AUTH_TOKEN="ton-token" && ./scripts/deploy-builds-to-netlify.sh
 
 set -e
 
-echo "🚀 Déploiement des 44 builds sur Netlify"
-echo "========================================"
+echo "🚀 Déploiement des builds vers Netlify"
+echo "======================================="
 echo ""
 
-BUILDS_DIR="builds"
+# Vérifier le token
+if [ -z "$NETLIFY_AUTH_TOKEN" ]; then
+    echo "❌ NETLIFY_AUTH_TOKEN non défini"
+    echo ""
+    echo "Usage: export NETLIFY_AUTH_TOKEN='ton-token' && ./scripts/deploy-builds-to-netlify.sh"
+    exit 1
+fi
 
-if [ ! -d "$BUILDS_DIR" ]; then
+# Vérifier que les builds existent
+if [ ! -d "builds" ]; then
     echo "❌ Dossier builds/ introuvable"
-    echo "💡 Exécutez d'abord : ./scripts/build-all-cities.sh"
+    echo "Lance d'abord: ./scripts/build-all-cities.sh"
     exit 1
-fi
-
-# Vérifier que netlify-cli est installé
-if ! command -v netlify &> /dev/null; then
-    echo "❌ netlify-cli n'est pas installé"
-    exit 1
-fi
-
-# Vérifier l'authentification
-if ! netlify status &> /dev/null; then
-    echo "❌ Non authentifié sur Netlify"
-    netlify login
 fi
 
 # Lire le fichier cities
@@ -37,22 +32,21 @@ if [ ! -f "$CITIES_FILE" ]; then
     exit 1
 fi
 
+# Vérifier jq
+if ! command -v jq &> /dev/null; then
+    echo "❌ jq non installé : brew install jq"
+    exit 1
+fi
+
 # Extraire la liste des villes
 CITIES=$(cat "$CITIES_FILE" | jq -r '.cities[] | @json')
 COUNT=0
 TOTAL=$(echo "$CITIES" | wc -l | tr -d ' ')
+DEPLOYED=0
+SKIPPED=0
+FAILED=0
 
-echo "✅ $TOTAL sites à déployer"
-echo ""
-
-# Demander confirmation
-read -p "⚠️  Voulez-vous déployer en PRODUCTION ? (y/N) " -n 1 -r
-echo ""
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    echo "❌ Annulé"
-    exit 1
-fi
-
+echo "📦 $TOTAL builds à déployer"
 echo ""
 
 # Boucle sur chaque ville
@@ -61,37 +55,79 @@ while IFS= read -r city; do
 
     SLUG=$(echo "$city" | jq -r '.slug')
     NAME=$(echo "$city" | jq -r '.name')
-
-    CITY_BUILD_DIR="$BUILDS_DIR/$SLUG"
     SITE_NAME="expert-humidite-$SLUG"
+    BUILD_DIR="builds/$SLUG"
 
-    if [ ! -d "$CITY_BUILD_DIR" ]; then
-        echo "[$COUNT/$TOTAL] ⚠️  $NAME : build introuvable, skip"
+    echo "[$COUNT/$TOTAL] 🏙️  $NAME ($SITE_NAME)..."
+
+    # Vérifier que le build existe
+    if [ ! -d "$BUILD_DIR" ]; then
+        echo "   ❌ Build introuvable dans $BUILD_DIR"
+        ((FAILED++))
+        echo ""
         continue
     fi
 
-    echo "[$COUNT/$TOTAL] 🚀 Déploiement de $NAME..."
-    echo "            Site: $SITE_NAME"
-    echo "            Dir:  $CITY_BUILD_DIR"
+    # Vérifier si le site existe sur Netlify
+    SITE_ID=$(curl -s -X GET "https://api.netlify.com/api/v1/sites?name=$SITE_NAME" \
+        -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" | jq -r '.[0].id // empty')
 
-    # Déployer en production
-    netlify deploy \
-        --site="$SITE_NAME" \
-        --prod \
-        --dir="$CITY_BUILD_DIR" \
-        --message="Deploy $NAME - $(date +%Y-%m-%d)" \
-        2>&1 | grep -E "(Live|Production|URL)" || echo "   ✅ Déployé"
+    if [ -z "$SITE_ID" ]; then
+        echo "   ⚠️  Site Netlify n'existe pas encore, skip"
+        ((SKIPPED++))
+    else
+        echo "   → Déploiement vers $SITE_NAME (ID: $SITE_ID)..."
+
+        # Créer un zip du build
+        ZIP_FILE="/tmp/${SITE_NAME}-deploy.zip"
+        (cd "$BUILD_DIR" && zip -r -q "$ZIP_FILE" .)
+
+        # Upload via API Netlify
+        DEPLOY_RESPONSE=$(curl -s -X POST "https://api.netlify.com/api/v1/sites/$SITE_ID/deploys" \
+            -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+            -H "Content-Type: application/zip" \
+            --data-binary "@$ZIP_FILE")
+
+        DEPLOY_ID=$(echo "$DEPLOY_RESPONSE" | jq -r '.id // empty')
+
+        if [ -n "$DEPLOY_ID" ]; then
+            DEPLOY_URL=$(echo "$DEPLOY_RESPONSE" | jq -r '.ssl_url // .url')
+            echo "   ✅ Déployé : $DEPLOY_URL"
+            ((DEPLOYED++))
+
+            # Nettoyer le zip
+            rm -f "$ZIP_FILE"
+        else
+            ERROR=$(echo "$DEPLOY_RESPONSE" | jq -r '.message // "Erreur inconnue"')
+            echo "   ❌ Erreur : $ERROR"
+            ((FAILED++))
+        fi
+    fi
 
     echo ""
 
 done <<< "$CITIES"
 
-echo "========================================"
-echo "✅ Déploiement terminé pour $TOTAL sites !"
+echo "=========================================="
+echo "✅ Déploiement terminé !"
 echo ""
-echo "🌐 Vérification des sites :"
-echo "   netlify sites:list"
+echo "📊 Statistiques :"
+echo "   - Traités : $COUNT/$TOTAL"
+echo "   - Déployés : $DEPLOYED"
+echo "   - Sites inexistants (skipped) : $SKIPPED"
+echo "   - Erreurs : $FAILED"
 echo ""
-echo "🔍 Pour voir un site spécifique :"
-echo "   netlify open --site=expert-humidite-paris"
+
+if [ $SKIPPED -gt 0 ]; then
+    echo "⚠️  $SKIPPED sites n'existent pas encore sur Netlify"
+    echo "   Lance d'abord : export NETLIFY_AUTH_TOKEN='...' && ./scripts/create-sites-api.sh"
+    echo ""
+fi
+
+echo "🔍 Vérification :"
+echo "   Teste chaque URL dans ton navigateur :"
+echo "   - https://expert-humidite-paris.netlify.app"
+echo "   - https://expert-humidite-lyon.netlify.app"
+echo "   - https://expert-humidite-marseille.netlify.app"
+echo "   - ..."
 echo ""

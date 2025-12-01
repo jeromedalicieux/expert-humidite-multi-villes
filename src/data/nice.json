@@ -1,0 +1,33 @@
+{
+  "id": 5,
+  "slug": "nice",
+  "name": "Nice",
+  "domain": "expert-humidite-nice.fr",
+  "department": "06",
+  "postalCode": "06000",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": "Grande métropole",
+  "climate": "méditerranéen",
+  "humidity_context": "Baie des Anges, Promenade des Anglais, chaleur, immeubles Belle Époque",
+  "neighborhoods": [
+    "Vieux-Nice",
+    "Cimiez",
+    "Libération",
+    "Riquier"
+  ],
+  "nearbyTowns": [
+    "Antibes",
+    "Cannes",
+    "Grasse",
+    "Cagnes-sur-Mer",
+    "Menton",
+    "Saint-Laurent-du-Var",
+    "Villefranche-sur-Mer",
+    "Vence",
+    "Vallauris",
+    "Mougins",
+    "Le Cannet",
+    "Mandelieu-la-Napoule"
+  ],
+  "variationGroup": "B"
+}

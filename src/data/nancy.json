@@ -1,0 +1,19 @@
+{
+  "slug": "nancy",
+  "name": "Nancy",
+  "department": "Meurthe-et-Moselle",
+  "region": "Grand Est",
+  "zipCode": "54000",
+  "population": "105000",
+  "climate": "continental",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Boudonville",
+    "Saint-Léon",
+    "Haussonville"
+  ],
+  "seo": {
+    "title": "Expert Humidité Nancy | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Nancy (54000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

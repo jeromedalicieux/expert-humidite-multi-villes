@@ -1,0 +1,19 @@
+{
+  "slug": "nimes",
+  "name": "Nîmes",
+  "department": "Gard",
+  "region": "Occitanie",
+  "zipCode": "30000",
+  "population": "150000",
+  "climate": "méditerranéen",
+  "nearbyQuartiers": [
+    "Centre historique",
+    "Ecusson",
+    "Pissevin",
+    "Chemin Bas d'Avignon"
+  ],
+  "seo": {
+    "title": "Expert Humidité Nîmes | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Nîmes (30000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

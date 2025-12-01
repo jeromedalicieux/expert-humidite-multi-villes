@@ -51,8 +51,8 @@ while IFS= read -r city; do
     cp src/utils/domain-detection.ts src/utils/domain-detection.ts.bak
 
     # Remplacer le fallback par la ville actuelle
-    sed -i.tmp "s/'localhost': 'toulouse'/'localhost': '$SLUG'/g" src/utils/domain-detection.ts
-    sed -i.tmp "s/return 'toulouse'/return '$SLUG'/g" src/utils/domain-detection.ts
+    sed -i.tmp "s/'localhost': 'bordeaux'/'localhost': '$SLUG'/g" src/utils/domain-detection.ts
+    sed -i.tmp "s/return 'bordeaux'/return '$SLUG'/g" src/utils/domain-detection.ts
     rm src/utils/domain-detection.ts.tmp
 
     # Build le site

@@ -1,0 +1,19 @@
+{
+  "slug": "poitiers",
+  "name": "Poitiers",
+  "department": "Vienne",
+  "region": "Nouvelle-Aquitaine",
+  "zipCode": "86000",
+  "population": "90000",
+  "climate": "océanique dégradé",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Beaulieu",
+    "Saint-Eloi",
+    "Montbernage"
+  ],
+  "seo": {
+    "title": "Expert Humidité Poitiers | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Poitiers (86000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

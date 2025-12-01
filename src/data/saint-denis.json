@@ -1,0 +1,19 @@
+{
+  "slug": "saint-denis",
+  "name": "Saint-Denis",
+  "department": "Seine-Saint-Denis",
+  "region": "Île-de-France",
+  "zipCode": "93200",
+  "population": "112000",
+  "climate": "océanique dégradé",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Pleyel",
+    "Franc-Moisin",
+    "Stade de France"
+  ],
+  "seo": {
+    "title": "Expert Humidité Saint-Denis | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Saint-Denis (93200). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

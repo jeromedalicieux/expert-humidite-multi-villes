@@ -1,0 +1,19 @@
+{
+  "slug": "aix-en-provence",
+  "name": "Aix-en-Provence",
+  "department": "Bouches-du-Rhône",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "zipCode": "13100",
+  "population": "145000",
+  "climate": "méditerranéen",
+  "nearbyQuartiers": [
+    "Centre historique",
+    "Jas de Bouffan",
+    "Les Milles",
+    "Puyricard"
+  ],
+  "seo": {
+    "title": "Expert Humidité Aix-en-Provence | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Aix-en-Provence (13100). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "brest",
+  "name": "Brest",
+  "department": "Finistère",
+  "region": "Bretagne",
+  "zipCode": "29200",
+  "population": "140000",
+  "climate": "océanique humide",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Lambézellec",
+    "Saint-Marc",
+    "Europe"
+  ],
+  "seo": {
+    "title": "Expert Humidité Brest | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Brest (29200). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

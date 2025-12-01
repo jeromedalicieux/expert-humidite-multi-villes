@@ -1,0 +1,33 @@
+{
+  "id": 14,
+  "slug": "toulon",
+  "name": "Toulon",
+  "domain": "expert-humidite-toulon.fr",
+  "department": "83",
+  "postalCode": "83000",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": "Grande ville",
+  "climate": "méditerranéen",
+  "humidity_context": "Rade, base navale, mistral, immeubles méditerranéens",
+  "neighborhoods": [
+    "Mourillon",
+    "Petit Chicago",
+    "Claret",
+    "Brunet"
+  ],
+  "nearbyTowns": [
+    "La Seyne-sur-Mer",
+    "Hyères",
+    "La Garde",
+    "Six-Fours-les-Plages",
+    "La Valette-du-Var",
+    "Ollioules",
+    "Sanary-sur-Mer",
+    "Le Pradet",
+    "Bandol",
+    "Saint-Mandrier-sur-Mer",
+    "La Crau",
+    "Carqueiranne"
+  ],
+  "variationGroup": "A"
+}

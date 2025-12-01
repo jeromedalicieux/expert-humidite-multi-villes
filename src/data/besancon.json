@@ -1,0 +1,33 @@
+{
+  "id": 29,
+  "slug": "besancon",
+  "name": "Besançon",
+  "domain": "expert-humidite-besancon.fr",
+  "department": "25",
+  "postalCode": "25000",
+  "region": "Bourgogne-Franche-Comté",
+  "population": "Grande ville",
+  "climate": "semi-continental",
+  "humidity_context": "Doubs, méandre, citadelle, caves",
+  "neighborhoods": [
+    "Centre-ville",
+    "Battant",
+    "Planoise",
+    "Saint-Claude"
+  ],
+  "nearbyTowns": [
+    "Pirey",
+    "Chalezeule",
+    "École-Valentin",
+    "Saint-Vit",
+    "Châtillon-le-Duc",
+    "Pelousey",
+    "Montfaucon",
+    "Avanne-Aveney",
+    "Thise",
+    "Pouilley-les-Vignes",
+    "Serre-les-Sapins",
+    "Franois"
+  ],
+  "variationGroup": "A"
+}

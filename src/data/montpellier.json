@@ -1,0 +1,33 @@
+{
+  "id": 7,
+  "slug": "montpellier",
+  "name": "Montpellier",
+  "domain": "expert-humidite-montpellier.fr",
+  "department": "34",
+  "postalCode": "34000",
+  "region": "Occitanie",
+  "population": "Grande ville",
+  "climate": "méditerranéen",
+  "humidity_context": "Lez, tramway, immeubles modernes, chaleur",
+  "neighborhoods": [
+    "Écusson",
+    "Antigone",
+    "Port Marianne",
+    "Beaux-Arts"
+  ],
+  "nearbyTowns": [
+    "Castelnau-le-Lez",
+    "Lattes",
+    "Pérols",
+    "Jacou",
+    "Le Crès",
+    "Mauguio",
+    "Saint-Jean-de-Védas",
+    "Juvignac",
+    "Clapiers",
+    "Villeneuve-lès-Maguelone",
+    "Grabels",
+    "Palavas-les-Flots"
+  ],
+  "variationGroup": "A"
+}

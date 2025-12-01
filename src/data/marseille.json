@@ -1,0 +1,33 @@
+{
+  "id": 2,
+  "slug": "marseille",
+  "name": "Marseille",
+  "domain": "expert-humidite-marseille.fr",
+  "department": "13",
+  "postalCode": "13001",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "population": "Grande métropole",
+  "climate": "méditerranéen",
+  "humidity_context": "Calanques, mistral, vieux port, immeubles anciens",
+  "neighborhoods": [
+    "Vieux-Port",
+    "Panier",
+    "Endoume",
+    "Belle de Mai"
+  ],
+  "nearbyTowns": [
+    "Aix-en-Provence",
+    "Aubagne",
+    "Martigues",
+    "Salon-de-Provence",
+    "Vitrolles",
+    "Istres",
+    "Marignane",
+    "Cassis",
+    "La Ciotat",
+    "Gardanne",
+    "Allauch",
+    "Auriol"
+  ],
+  "variationGroup": "B"
+}

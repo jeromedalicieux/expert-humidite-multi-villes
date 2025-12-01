@@ -1,0 +1,33 @@
+{
+  "id": 30,
+  "slug": "metz",
+  "name": "Metz",
+  "domain": "expert-humidite-metz.fr",
+  "department": "57",
+  "postalCode": "57000",
+  "region": "Grand Est",
+  "population": "Grande ville",
+  "climate": "semi-continental",
+  "humidity_context": "Moselle, pierre de Jaumont, humidité fluviale",
+  "neighborhoods": [
+    "Centre-ville",
+    "Borny",
+    "Sablon",
+    "Queuleu"
+  ],
+  "nearbyTowns": [
+    "Montigny-lès-Metz",
+    "Woippy",
+    "Moulins-lès-Metz",
+    "Le Ban-Saint-Martin",
+    "Longeville-lès-Metz",
+    "Ars-sur-Moselle",
+    "Marly",
+    "Saint-Julien-lès-Metz",
+    "Plappeville",
+    "Châtel-Saint-Germain",
+    "Augny",
+    "Rozérieulles"
+  ],
+  "variationGroup": "B"
+}

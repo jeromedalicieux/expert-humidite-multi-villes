@@ -1,0 +1,33 @@
+{
+  "id": 38,
+  "slug": "montreuil",
+  "name": "Montreuil",
+  "domain": "expert-humidite-montreuil.fr",
+  "department": "93",
+  "postalCode": "93100",
+  "region": "Île-de-France",
+  "population": "Grande ville",
+  "climate": "océanique dégradé",
+  "humidity_context": "Proche Paris, anciens murs à pêches, urbanisation",
+  "neighborhoods": [
+    "Centre-ville",
+    "Croix-de-Chavaux",
+    "Bas-Montreuil",
+    "Branly"
+  ],
+  "nearbyTowns": [
+    "Bagnolet",
+    "Vincennes",
+    "Rosny-sous-Bois",
+    "Noisy-le-Sec",
+    "Romainville",
+    "Fontenay-sous-Bois",
+    "Paris",
+    "Bobigny",
+    "Bondy",
+    "Les Lilas",
+    "Pantin",
+    "Le Pré-Saint-Gervais"
+  ],
+  "variationGroup": "A"
+}

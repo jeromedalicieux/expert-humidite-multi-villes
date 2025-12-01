@@ -1,0 +1,33 @@
+{
+  "id": 42,
+  "slug": "bayonne",
+  "name": "Bayonne",
+  "domain": "expert-humidite-bayonne.fr",
+  "department": "64",
+  "postalCode": "64100",
+  "region": "Nouvelle-Aquitaine",
+  "population": "Ville moyenne",
+  "climate": "océanique",
+  "humidity_context": "Adour, Nive, Pays basque, pluies atlantiques",
+  "neighborhoods": [
+    "Grand-Bayonne",
+    "Petit-Bayonne",
+    "Saint-Esprit",
+    "Marracq"
+  ],
+  "nearbyTowns": [
+    "Anglet",
+    "Biarritz",
+    "Boucau",
+    "Saint-Pierre-d'Irube",
+    "Mouguerre",
+    "Villefranque",
+    "Lahonce",
+    "Urcuit",
+    "Bardos",
+    "Urt",
+    "Briscous",
+    "Hasparren"
+  ],
+  "variationGroup": "B"
+}

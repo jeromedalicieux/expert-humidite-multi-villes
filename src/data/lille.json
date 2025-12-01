@@ -1,0 +1,33 @@
+{
+  "id": 10,
+  "slug": "lille",
+  "name": "Lille",
+  "domain": "expert-humidite-lille.fr",
+  "department": "59",
+  "postalCode": "59000",
+  "region": "Hauts-de-France",
+  "population": "Grande métropole",
+  "climate": "océanique dégradé",
+  "humidity_context": "Deûle, briques, humidité du Nord",
+  "neighborhoods": [
+    "Vieux-Lille",
+    "Wazemmes",
+    "Vauban",
+    "Fives"
+  ],
+  "nearbyTowns": [
+    "Roubaix",
+    "Tourcoing",
+    "Villeneuve-d'Ascq",
+    "Marcq-en-Barœul",
+    "La Madeleine",
+    "Mons-en-Barœul",
+    "Lambersart",
+    "Hem",
+    "Wattrelos",
+    "Wasquehal",
+    "Loos",
+    "Croix"
+  ],
+  "variationGroup": "C"
+}

@@ -8,8 +8,13 @@
   "region": "Nouvelle-Aquitaine",
   "population": "Grande métropole",
   "climate": "océanique aquitain",
-  "humidity_context": "Bords de Garonne, immeubles en pierre de calcaire tendre, maisons et appartements anciens",
-  "neighborhoods": ["Saint-Pierre", "Chartrons", "Bastide", "Victoire", "Mériadeck"],
+  "humidity_context": "Garonne, pierre de calcaire tendre, immeubles anciens",
+  "neighborhoods": [
+    "Saint-Pierre",
+    "Chartrons",
+    "Bastide",
+    "Victoire"
+  ],
   "nearbyTowns": [
     "Mérignac",
     "Pessac",

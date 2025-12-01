@@ -1,19 +1,25 @@
 // src/types.ts
 
 export interface City {
-  id: number;
+  id?: number;
   slug: string;
   name: string;
-  domain: string;
+  domain?: string;
   department: string;
-  postalCode: string;
+  postalCode?: string;
+  zipCode?: string; // Alias pour postalCode
   region: string;
   population: string;
   climate: string;
-  humidity_context: string;
-  neighborhoods: string[];
+  humidity_context?: string;
+  neighborhoods?: string[];
+  nearbyQuartiers?: string[]; // Alias pour neighborhoods
   nearbyTowns?: string[];
-  variationGroup: 'A' | 'B' | 'C';
+  variationGroup?: 'A' | 'B' | 'C';
+  seo?: {
+    title?: string;
+    description?: string;
+  };
 }
 
 export interface ContentVariation {

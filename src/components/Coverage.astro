@@ -10,6 +10,9 @@ interface Props {
 }
 
 const { city } = Astro.props;
+
+// Support pour les deux formats de quartiers
+const neighborhoods = city.neighborhoods || city.nearbyQuartiers || [];
 ---
 
 <section id="zone-intervention" class="py-16 md:py-24 bg-gray-50">
@@ -47,13 +50,13 @@ const { city } = Astro.props;
             </div>
           </div>
 
-          {city.neighborhoods && city.neighborhoods.length > 0 && (
+          {neighborhoods.length > 0 && (
             <div class="flex items-start gap-3">
               <div class="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
               <div>
                 <h4 class="font-bold text-gray-900 mb-2">Quartiers couverts</h4>
                 <div class="flex flex-wrap gap-2">
-                  {city.neighborhoods.map((neighborhood) => (
+                  {neighborhoods.map((neighborhood) => (
                     <span class="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full">
                       {neighborhood}
                     </span>

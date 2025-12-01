@@ -1,0 +1,33 @@
+{
+  "id": 11,
+  "slug": "rennes",
+  "name": "Rennes",
+  "domain": "expert-humidite-rennes.fr",
+  "department": "35",
+  "postalCode": "35000",
+  "region": "Bretagne",
+  "population": "Grande ville",
+  "climate": "océanique",
+  "humidity_context": "Vilaine, Ille, pluies bretonnes, granit",
+  "neighborhoods": [
+    "Centre-ville",
+    "Maurepas",
+    "Cleunay",
+    "Villejean"
+  ],
+  "nearbyTowns": [
+    "Saint-Grégoire",
+    "Cesson-Sévigné",
+    "Chantepie",
+    "Saint-Jacques-de-la-Lande",
+    "Betton",
+    "Bruz",
+    "Pacé",
+    "Vern-sur-Seiche",
+    "Thorigné-Fouillard",
+    "Vezin-le-Coquet",
+    "L'Hermitage",
+    "Chartres-de-Bretagne"
+  ],
+  "variationGroup": "A"
+}

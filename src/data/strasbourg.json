@@ -1,0 +1,33 @@
+{
+  "id": 8,
+  "slug": "strasbourg",
+  "name": "Strasbourg",
+  "domain": "expert-humidite-strasbourg.fr",
+  "department": "67",
+  "postalCode": "67000",
+  "region": "Grand Est",
+  "population": "Grande ville",
+  "climate": "semi-continental",
+  "humidity_context": "Ill, Rhin, colombages, Grand Est",
+  "neighborhoods": [
+    "Grande Île",
+    "Neudorf",
+    "Cronenbourg",
+    "Meinau"
+  ],
+  "nearbyTowns": [
+    "Schiltigheim",
+    "Illkirch-Graffenstaden",
+    "Hoenheim",
+    "Lingolsheim",
+    "Ostwald",
+    "Bischheim",
+    "Eckbolsheim",
+    "Geispolsheim",
+    "Oberhausbergen",
+    "Mundolsheim",
+    "Holtzheim",
+    "Souffelweyersheim"
+  ],
+  "variationGroup": "B"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 40,
+  "slug": "orleans",
+  "name": "Orléans",
+  "domain": "expert-humidite-orleans.fr",
+  "department": "45",
+  "postalCode": "45000",
+  "region": "Centre-Val de Loire",
+  "population": "Grande ville",
+  "climate": "océanique dégradé",
+  "humidity_context": "Loire, Jeanne d'Arc, Val de Loire, fleuve",
+  "neighborhoods": [
+    "Centre-ville",
+    "Argonne",
+    "La Source",
+    "Saint-Marceau"
+  ],
+  "nearbyTowns": [
+    "Olivet",
+    "Saint-Jean-de-Braye",
+    "Saint-Jean-de-la-Ruelle",
+    "Fleury-les-Aubrais",
+    "Ormes",
+    "Saran",
+    "Ingré",
+    "Semoy",
+    "Saint-Pryvé-Saint-Mesmin",
+    "Chécy",
+    "La Chapelle-Saint-Mesmin",
+    "Saint-Denis-en-Val"
+  ],
+  "variationGroup": "C"
+}

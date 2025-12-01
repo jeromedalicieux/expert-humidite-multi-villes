@@ -1,0 +1,33 @@
+{
+  "id": 43,
+  "slug": "dax",
+  "name": "Dax",
+  "domain": "expert-humidite-dax.fr",
+  "department": "40",
+  "postalCode": "40100",
+  "region": "Nouvelle-Aquitaine",
+  "population": "Ville moyenne",
+  "climate": "océanique",
+  "humidity_context": "Adour, thermalisme, humidité landaise",
+  "neighborhoods": [
+    "Centre-ville",
+    "Sablar",
+    "Saint-Vincent",
+    "Christus"
+  ],
+  "nearbyTowns": [
+    "Saint-Paul-lès-Dax",
+    "Seyresse",
+    "Narrosse",
+    "Pontonx-sur-l'Adour",
+    "Téthieu",
+    "Oeyreluy",
+    "Heugas",
+    "Mées",
+    "Saint-Pandelon",
+    "Hinx",
+    "Candresse",
+    "Cagnotte"
+  ],
+  "variationGroup": "C"
+}

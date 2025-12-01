@@ -1,0 +1,33 @@
+{
+  "id": 44,
+  "slug": "mont-de-marsan",
+  "name": "Mont-de-Marsan",
+  "domain": "expert-humidite-mont-de-marsan.fr",
+  "department": "40",
+  "postalCode": "40000",
+  "region": "Nouvelle-Aquitaine",
+  "population": "Ville moyenne",
+  "climate": "océanique",
+  "humidity_context": "Midouze, Landes, forêt, humidité atmosphérique",
+  "neighborhoods": [
+    "Centre-ville",
+    "Peyrouat",
+    "Saint-Médard",
+    "Nonères"
+  ],
+  "nearbyTowns": [
+    "Saint-Pierre-du-Mont",
+    "Saint-Avit",
+    "Uchacq-et-Parentis",
+    "Campagne",
+    "Laglorieuse",
+    "Bostens",
+    "Pouydesseaux",
+    "Lucbardez-et-Bargues",
+    "Benquet",
+    "Bretagne-de-Marsan",
+    "Saint-Perdon",
+    "Gaillères"
+  ],
+  "variationGroup": "A"
+}

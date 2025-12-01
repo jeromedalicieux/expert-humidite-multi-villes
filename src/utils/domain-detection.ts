@@ -16,8 +16,8 @@ const DOMAIN_TO_CITY_MAP: Record<string, string> = {
   // ... Les 40 autres villes seront ajoutées
 
   // Domaines de développement
-  'localhost': 'toulouse',
-  'localhost:4321': 'toulouse',
+  'localhost': 'bordeaux',
+  'localhost:4321': 'bordeaux',
 };
 
 /**
@@ -42,14 +42,24 @@ export function detectCityFromDomain(hostname: string): string {
     return match[1];
   }
 
-  // Domaine Netlify preview
+  // Domaine Netlify - Extraire la ville du sous-domaine
+  // Format: experthumidite[ville].netlify.app ou [branch]--experthumidite[ville].netlify.app
   if (normalizedHost.includes('.netlify.app')) {
-    // Par défaut, afficher Toulouse pour les previews
-    return 'toulouse';
+    // Extraire le nom du site (sans branch preview)
+    const siteName = normalizedHost.split('--').pop()?.split('.')[0] || '';
+
+    // Extraire la ville du nom du site (ex: experthumiditetoulouse -> toulouse)
+    const cityMatch = siteName.match(/experthumidite(.+)/);
+    if (cityMatch && cityMatch[1]) {
+      return cityMatch[1];
+    }
+
+    // Fallback Bordeaux
+    return 'bordeaux';
   }
 
-  // Par défaut, Toulouse
-  return 'toulouse';
+  // Par défaut, Bordeaux
+  return 'bordeaux';
 }
 
 /**

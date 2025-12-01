@@ -1,0 +1,19 @@
+{
+  "slug": "boulogne-billancourt",
+  "name": "Boulogne-Billancourt",
+  "department": "Hauts-de-Seine",
+  "region": "Île-de-France",
+  "zipCode": "92100",
+  "population": "120000",
+  "climate": "océanique dégradé",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Billancourt",
+    "Rives de Seine",
+    "Les Princes"
+  ],
+  "seo": {
+    "title": "Expert Humidité Boulogne-Billancourt | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Boulogne-Billancourt (92100). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

@@ -1,28 +1,18 @@
-{
-  "faq": [
-    {
-      "question": "Quel est le tarif d'un diagnostic humidité à Toulouse ?",
-      "answer": "Le tarif de notre diagnostic humidité démarre à 190€, applicable aussi bien en consultation visio qu'en déplacement à domicile. Le montant final dépend de plusieurs facteurs : surface du bien (maison, appartement, immeuble), nombre de pièces concernées et nature des pathologies observées. Un devis détaillé et sans engagement vous est systématiquement proposé avant intervention."
-    },
-    {
-      "question": "Quelle différence entre expertise et diagnostic humidité ?",
-      "answer": "Les notions d'expertise et de diagnostic humidité sont synonymes dans notre métier. Il s'agit d'une analyse approfondie des pathologies d'humidité affectant votre logement. Notre professionnel certifié procède à des mesures instrumentales (hygromètre, imagerie thermique) pour identifier les causes réelles des désordres. Un rapport circonstancié avec solutions techniques vous est fourni à l'issue de l'intervention."
-    },
-    {
-      "question": "Faut-il obligatoirement faire expertiser l'humidité avant de vendre à Toulouse ?",
-      "answer": "Aucune disposition légale n'impose un diagnostic humidité pour une transaction immobilière. Néanmoins, sa réalisation est vivement conseillée en présence de signes d'humidité visibles. Elle sécurise juridiquement la vente en limitant les risques de contentieux pour vice caché. Pour l'acquéreur, c'est aussi un gage de transparence qui facilite la prise de décision."
-    },
-    {
-      "question": "Quelle est la durée d'intervention pour un diagnostic à Toulouse ?",
-      "answer": "L'intervention sur place s'étend sur 1h30 à 2h environ, variable selon la superficie à analyser (maison, appartement ou immeuble) et l'ampleur des pathologies rencontrées. Notre expert procède aux relevés instrumentaux, photographies et prélèvements nécessaires. Le dossier technique complet, incluant préconisations de remédiation, vous parvient dans un délai de 10 jours ouvrables."
-    },
-    {
-      "question": "L'expert humidité est-il réellement indépendant ?",
-      "answer": "Notre expert intervient en toute neutralité, sans aucun lien commercial avec des entreprises de travaux. Son activité se limite strictement au diagnostic et à l'expertise. Cette indépendance absolue vous garantit une évaluation impartiale de votre situation. Vous conservez ensuite l'entière liberté de sélectionner le professionnel qui réalisera les travaux préconisés."
-    },
-    {
-      "question": "Quels instruments de mesure sont utilisés durant l'expertise ?",
-      "answer": "Notre expert déploie un arsenal technique professionnel adapté à chaque situation : hygromètres de contact et sans contact pour évaluer la teneur en eau des matériaux, caméra infrarouge pour visualiser les déperditions thermiques et infiltrations invisibles à l'œil nu, anémomètres pour contrôler l'efficacité de la ventilation. Si la situation l'exige, des échantillons sont prélevés pour analyses en laboratoire spécialisé. L'instrumentation est ajustée selon la nature des désordres constatés dans votre maison ou appartement."
-    }
-  ]
-}
+[
+  {
+    "q": "Pourquoi faire appel à un expert en humidité à Toulouse ?",
+    "a": "À Toulouse, le climat océanique dégradé et Garonne, brique rose, canal du Midi favorisent l'apparition de problèmes d'humidité. Un expert certifié diagnostique précisément l'origine (infiltration, condensation, remontées capillaires) et propose des solutions adaptées à votre bien."
+  },
+  {
+    "q": "Combien coûte une expertise humidité à Toulouse ?",
+    "a": "Le tarif d'un diagnostic humidité à Toulouse varie selon la surface et la complexité : entre 300€ et 800€ pour un appartement, 500€ à 1500€ pour une maison. Notre expertise inclut un rapport détaillé avec mesures et préconisations."
+  },
+  {
+    "q": "Quels sont les signes d'humidité dans un logement à Toulouse ?",
+    "a": "Les indices révélateurs à Toulouse : taches sombres ou auréoles sur les murs, moisissures noires, papier peint décollé, odeur de renfermé, condensation sur les vitres, salpêtre (dépôts blancs), bois gonflé. Ces symptômes nécessitent un diagnostic rapide."
+  },
+  {
+    "q": "Combien de temps dure un diagnostic humidité à Toulouse ?",
+    "a": "Une expertise humidité complète à Toulouse prend entre 1h30 et 3h selon la taille du bien. Notre expert utilise des appareils de mesure professionnels (hygromètre, humidimètre, caméra thermique) et vous remet le rapport sous 48 à 72h."
+  }
+]

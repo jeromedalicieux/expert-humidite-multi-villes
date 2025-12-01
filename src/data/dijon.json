@@ -1,0 +1,33 @@
+{
+  "id": 18,
+  "slug": "dijon",
+  "name": "Dijon",
+  "domain": "expert-humidite-dijon.fr",
+  "department": "21",
+  "postalCode": "21000",
+  "region": "Bourgogne-Franche-Comté",
+  "population": "Grande ville",
+  "climate": "semi-continental",
+  "humidity_context": "Ouche, caves bourguignonnes, pierres anciennes",
+  "neighborhoods": [
+    "Centre-ville",
+    "Fontaine d'Ouche",
+    "Grésilles",
+    "Montchapet"
+  ],
+  "nearbyTowns": [
+    "Chenôve",
+    "Talant",
+    "Longvic",
+    "Quetigny",
+    "Fontaine-lès-Dijon",
+    "Chevigny-Saint-Sauveur",
+    "Marsannay-la-Côte",
+    "Neuilly-lès-Dijon",
+    "Plombières-lès-Dijon",
+    "Perrigny-lès-Dijon",
+    "Daix",
+    "Ahuy"
+  ],
+  "variationGroup": "B"
+}

@@ -1,0 +1,33 @@
+{
+  "id": 13,
+  "slug": "saint-etienne",
+  "name": "Saint-Étienne",
+  "domain": "expert-humidite-saint-etienne.fr",
+  "department": "42",
+  "postalCode": "42000",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": "Grande ville",
+  "climate": "semi-continental",
+  "humidity_context": "Furan, relief, passé industriel, humidité",
+  "neighborhoods": [
+    "Centre-Deux",
+    "Châteaucreux",
+    "Montreynaud",
+    "Terrenoire"
+  ],
+  "nearbyTowns": [
+    "Saint-Priest-en-Jarez",
+    "La Ricamarie",
+    "Firminy",
+    "Roche-la-Molière",
+    "Villars",
+    "Saint-Chamond",
+    "Andrézieux-Bouthéon",
+    "Sorbiers",
+    "Saint-Jean-Bonnefonds",
+    "La Talaudière",
+    "Rive-de-Gier",
+    "Saint-Just-Saint-Rambert"
+  ],
+  "variationGroup": "C"
+}

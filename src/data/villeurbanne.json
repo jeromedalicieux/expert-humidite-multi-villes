@@ -1,0 +1,33 @@
+{
+  "id": 16,
+  "slug": "villeurbanne",
+  "name": "Villeurbanne",
+  "domain": "expert-humidite-villeurbanne.fr",
+  "department": "69",
+  "postalCode": "69100",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": "Grande ville",
+  "climate": "semi-continental",
+  "humidity_context": "Proche Lyon, Gratte-Ciel, urbanisation dense",
+  "neighborhoods": [
+    "Gratte-Ciel",
+    "Tonkin",
+    "Charpennes",
+    "Cusset"
+  ],
+  "nearbyTowns": [
+    "Lyon",
+    "Vaulx-en-Velin",
+    "Bron",
+    "Vénissieux",
+    "Caluire-et-Cuire",
+    "Rillieux-la-Pape",
+    "Décines-Charpieu",
+    "Meyzieu",
+    "Saint-Priest",
+    "Chassieu",
+    "Jonage",
+    "Sathonay-Camp"
+  ],
+  "variationGroup": "C"
+}

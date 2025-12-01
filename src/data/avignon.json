@@ -1,0 +1,19 @@
+{
+  "slug": "avignon",
+  "name": "Avignon",
+  "department": "Vaucluse",
+  "region": "Provence-Alpes-Côte d'Azur",
+  "zipCode": "84000",
+  "population": "92000",
+  "climate": "méditerranéen",
+  "nearbyQuartiers": [
+    "Intra-muros",
+    "Monclar",
+    "Barthelasse",
+    "Montfavet"
+  ],
+  "seo": {
+    "title": "Expert Humidité Avignon | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Avignon (84000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

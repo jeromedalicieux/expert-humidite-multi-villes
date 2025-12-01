@@ -1,0 +1,33 @@
+{
+  "id": 17,
+  "slug": "grenoble",
+  "name": "Grenoble",
+  "domain": "expert-humidite-grenoble.fr",
+  "department": "38",
+  "postalCode": "38000",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": "Grande ville",
+  "climate": "montagnard",
+  "humidity_context": "Isère, Drac, cuvette alpine, humidité",
+  "neighborhoods": [
+    "Hyper-centre",
+    "Saint-Bruno",
+    "Europole",
+    "Île Verte"
+  ],
+  "nearbyTowns": [
+    "Échirolles",
+    "Saint-Martin-d'Hères",
+    "Fontaine",
+    "Meylan",
+    "Seyssinet-Pariset",
+    "Sassenage",
+    "Éybens",
+    "Gières",
+    "Seyssins",
+    "Pont-de-Claix",
+    "Voreppe",
+    "Corenc"
+  ],
+  "variationGroup": "A"
+}

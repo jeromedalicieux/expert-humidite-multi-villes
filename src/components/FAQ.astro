@@ -17,14 +17,20 @@ interface FAQData {
 
 const { city } = Astro.props;
 
-// Charger dynamiquement la FAQ de la ville
-const faqData: FAQData = await import(`../data/faq-${city.slug}.json`);
+// Charger dynamiquement la FAQ de la ville avec fallback
+let faqData: FAQData;
+try {
+  faqData = await import(`../data/faq-${city?.slug || 'bordeaux'}.json`);
+} catch (e) {
+  // Fallback sur Bordeaux si le fichier n'existe pas
+  faqData = await import('../data/faq-bordeaux.json');
+}
 
 // Schema.org FAQPage
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": faqData.faq.map((item: FAQItem) => ({
+  "mainEntity": (faqData?.faq || []).map((item: FAQItem) => ({
     "@type": "Question",
     "name": item.question,
     "acceptedAnswer": {
@@ -50,7 +56,7 @@ const faqSchema = {
 
     <!-- Questions/Réponses -->
     <div class="space-y-6" itemscope itemtype="https://schema.org/FAQPage">
-      {faqData.faq.map((item: FAQItem, index: number) => (
+      {(faqData?.faq || []).map((item: FAQItem, index: number) => (
         <div
           class="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg"
           itemscope

@@ -1,0 +1,33 @@
+{
+  "id": 19,
+  "slug": "angers",
+  "name": "Angers",
+  "domain": "expert-humidite-angers.fr",
+  "department": "49",
+  "postalCode": "49000",
+  "region": "Pays de la Loire",
+  "population": "Grande ville",
+  "climate": "océanique",
+  "humidity_context": "Maine, schiste, tuffe, pluies régulières",
+  "neighborhoods": [
+    "Centre-ville",
+    "Doutre",
+    "Belle-Beille",
+    "Monplaisir"
+  ],
+  "nearbyTowns": [
+    "Avrillé",
+    "Trélazé",
+    "Les Ponts-de-Cé",
+    "Beaucouzé",
+    "Saint-Barthélemy-d'Anjou",
+    "Bouchemaine",
+    "Sainte-Gemmes-sur-Loire",
+    "Mûrs-Erigné",
+    "Saint-Sylvain-d'Anjou",
+    "Écouflant",
+    "Pellouailles-les-Vignes",
+    "Verrières-en-Anjou"
+  ],
+  "variationGroup": "C"
+}

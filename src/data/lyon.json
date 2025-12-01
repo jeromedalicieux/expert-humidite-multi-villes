@@ -1,0 +1,33 @@
+{
+  "id": 3,
+  "slug": "lyon",
+  "name": "Lyon",
+  "domain": "expert-humidite-lyon.fr",
+  "department": "69",
+  "postalCode": "69001",
+  "region": "Auvergne-Rhône-Alpes",
+  "population": "Grande métropole",
+  "climate": "semi-continental",
+  "humidity_context": "Saône, Rhône, traboules, pierre dorée",
+  "neighborhoods": [
+    "Vieux-Lyon",
+    "Presqu'île",
+    "Croix-Rousse",
+    "Part-Dieu"
+  ],
+  "nearbyTowns": [
+    "Villeurbanne",
+    "Vénissieux",
+    "Caluire-et-Cuire",
+    "Saint-Priest",
+    "Vaulx-en-Velin",
+    "Bron",
+    "Meyzieu",
+    "Décines-Charpieu",
+    "Oullins",
+    "Rillieux-la-Pape",
+    "Écully",
+    "Tassin-la-Demi-Lune"
+  ],
+  "variationGroup": "C"
+}

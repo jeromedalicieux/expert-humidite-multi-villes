@@ -1,0 +1,19 @@
+{
+  "slug": "caen",
+  "name": "Caen",
+  "department": "Calvados",
+  "region": "Normandie",
+  "zipCode": "14000",
+  "population": "105000",
+  "climate": "océanique",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Venoix",
+    "Grâce de Dieu",
+    "Pierre Heuzé"
+  ],
+  "seo": {
+    "title": "Expert Humidité Caen | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Caen (14000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

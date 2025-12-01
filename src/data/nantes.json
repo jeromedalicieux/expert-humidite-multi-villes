@@ -1,0 +1,33 @@
+{
+  "id": 6,
+  "slug": "nantes",
+  "name": "Nantes",
+  "domain": "expert-humidite-nantes.fr",
+  "department": "44",
+  "postalCode": "44000",
+  "region": "Pays de la Loire",
+  "population": "Grande métropole",
+  "climate": "océanique",
+  "humidity_context": "Loire, Erdre, tuffeau, pluies régulières",
+  "neighborhoods": [
+    "Bouffay",
+    "Île de Nantes",
+    "Hauts-Pavés",
+    "Doulon"
+  ],
+  "nearbyTowns": [
+    "Saint-Herblain",
+    "Rezé",
+    "Saint-Sébastien-sur-Loire",
+    "Orvault",
+    "Vertou",
+    "Couëron",
+    "Carquefou",
+    "Bouguenais",
+    "La Chapelle-sur-Erdre",
+    "Sainte-Luce-sur-Loire",
+    "Sautron",
+    "Basse-Goulaine"
+  ],
+  "variationGroup": "C"
+}

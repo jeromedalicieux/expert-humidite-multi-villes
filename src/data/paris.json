@@ -1,0 +1,33 @@
+{
+  "id": 1,
+  "slug": "paris",
+  "name": "Paris",
+  "domain": "expert-humidite-paris.fr",
+  "department": "75",
+  "postalCode": "75001",
+  "region": "Île-de-France",
+  "population": "Capitale",
+  "climate": "océanique dégradé",
+  "humidity_context": "Seine, Haussmann, métro, immeubles anciens",
+  "neighborhoods": [
+    "Marais",
+    "Saint-Germain",
+    "Montmartre",
+    "Bastille"
+  ],
+  "nearbyTowns": [
+    "Boulogne-Billancourt",
+    "Montreuil",
+    "Saint-Denis",
+    "Argenteuil",
+    "Levallois-Perret",
+    "Issy-les-Moulineaux",
+    "Vincennes",
+    "Neuilly-sur-Seine",
+    "Pantin",
+    "Aubervilliers",
+    "Clichy",
+    "Ivry-sur-Seine"
+  ],
+  "variationGroup": "A"
+}

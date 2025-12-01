@@ -1,0 +1,19 @@
+{
+  "slug": "clermont-ferrand",
+  "name": "Clermont-Ferrand",
+  "department": "Puy-de-Dôme",
+  "region": "Auvergne-Rhône-Alpes",
+  "zipCode": "63000",
+  "population": "145000",
+  "climate": "continental dégradé",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Champratel",
+    "Montferrand",
+    "La Pradelle"
+  ],
+  "seo": {
+    "title": "Expert Humidité Clermont-Ferrand | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Clermont-Ferrand (63000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

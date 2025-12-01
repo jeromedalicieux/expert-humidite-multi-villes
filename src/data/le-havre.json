@@ -1,0 +1,33 @@
+{
+  "id": 15,
+  "slug": "le-havre",
+  "name": "Le Havre",
+  "domain": "expert-humidite-le-havre.fr",
+  "department": "76",
+  "postalCode": "76600",
+  "region": "Normandie",
+  "population": "Grande ville",
+  "climate": "océanique",
+  "humidity_context": "Seine, Manche, béton Perret, humidité maritime",
+  "neighborhoods": [
+    "Centre-ville",
+    "Sanvic",
+    "Graville",
+    "Caucriauville"
+  ],
+  "nearbyTowns": [
+    "Montivilliers",
+    "Sainte-Adresse",
+    "Octeville-sur-Mer",
+    "Gonfreville-l'Orcher",
+    "Harfleur",
+    "Fontaine-la-Mallet",
+    "Rolleville",
+    "Gainneville",
+    "Épouville",
+    "Manéglise",
+    "Le Hode",
+    "Rogerville"
+  ],
+  "variationGroup": "B"
+}

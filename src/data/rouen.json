@@ -1,0 +1,33 @@
+{
+  "id": 39,
+  "slug": "rouen",
+  "name": "Rouen",
+  "domain": "expert-humidite-rouen.fr",
+  "department": "76",
+  "postalCode": "76000",
+  "region": "Normandie",
+  "population": "Grande ville",
+  "climate": "océanique",
+  "humidity_context": "Seine, Jeanne d'Arc, colombages, humidité normande",
+  "neighborhoods": [
+    "Centre-ville",
+    "Grammont",
+    "Sapins",
+    "Grand-Mare"
+  ],
+  "nearbyTowns": [
+    "Sotteville-lès-Rouen",
+    "Mont-Saint-Aignan",
+    "Petit-Quevilly",
+    "Grand-Quevilly",
+    "Canteleu",
+    "Bois-Guillaume",
+    "Saint-Étienne-du-Rouvray",
+    "Bihorel",
+    "Déville-lès-Rouen",
+    "Maromme",
+    "Franqueville-Saint-Pierre",
+    "Oissel"
+  ],
+  "variationGroup": "B"
+}

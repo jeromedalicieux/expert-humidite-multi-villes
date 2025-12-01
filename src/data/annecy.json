@@ -1,0 +1,19 @@
+{
+  "slug": "annecy",
+  "name": "Annecy",
+  "department": "Haute-Savoie",
+  "region": "Auvergne-Rhône-Alpes",
+  "zipCode": "74000",
+  "population": "128000",
+  "climate": "continental montagnard",
+  "nearbyQuartiers": [
+    "Vieil Annecy",
+    "Novel",
+    "Cran-Gevrier",
+    "Seynod"
+  ],
+  "seo": {
+    "title": "Expert Humidité Annecy | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Annecy (74000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

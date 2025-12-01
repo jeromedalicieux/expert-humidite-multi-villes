@@ -1,0 +1,19 @@
+{
+  "slug": "amiens",
+  "name": "Amiens",
+  "department": "Somme",
+  "region": "Hauts-de-France",
+  "zipCode": "80000",
+  "population": "133000",
+  "climate": "océanique",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Saint-Leu",
+    "Henriville",
+    "Etouvie"
+  ],
+  "seo": {
+    "title": "Expert Humidité Amiens | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Amiens (80000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

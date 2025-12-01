@@ -1,0 +1,19 @@
+{
+  "slug": "dunkerque",
+  "name": "Dunkerque",
+  "department": "Nord",
+  "region": "Hauts-de-France",
+  "zipCode": "59140",
+  "population": "87000",
+  "climate": "océanique",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Malo-les-Bains",
+    "Rosendaël",
+    "Petite-Synthe"
+  ],
+  "seo": {
+    "title": "Expert Humidité Dunkerque | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Dunkerque (59140). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

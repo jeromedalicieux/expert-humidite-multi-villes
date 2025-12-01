@@ -1,0 +1,19 @@
+{
+  "slug": "tours",
+  "name": "Tours",
+  "department": "Indre-et-Loire",
+  "region": "Centre-Val de Loire",
+  "zipCode": "37000",
+  "population": "137000",
+  "climate": "océanique dégradé",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "Quartier Paul Bert",
+    "Sainte-Radegonde",
+    "La Riche"
+  ],
+  "seo": {
+    "title": "Expert Humidité Tours | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Tours (37000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "perpignan",
+  "name": "Perpignan",
+  "department": "Pyrénées-Orientales",
+  "region": "Occitanie",
+  "zipCode": "66000",
+  "population": "121000",
+  "climate": "méditerranéen",
+  "nearbyQuartiers": [
+    "Centre historique",
+    "Saint-Assiscle",
+    "Vernet",
+    "Moulin à Vent"
+  ],
+  "seo": {
+    "title": "Expert Humidité Perpignan | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Perpignan (66000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

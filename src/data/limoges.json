@@ -1,0 +1,19 @@
+{
+  "slug": "limoges",
+  "name": "Limoges",
+  "department": "Haute-Vienne",
+  "region": "Nouvelle-Aquitaine",
+  "zipCode": "87000",
+  "population": "132000",
+  "climate": "océanique dégradé",
+  "nearbyQuartiers": [
+    "Centre-ville",
+    "La Bastide",
+    "Landouge",
+    "Le Palais"
+  ],
+  "seo": {
+    "title": "Expert Humidité Limoges | Diagnostic Gratuit",
+    "description": "Expert en traitement de l'humidité à Limoges (87000). Diagnostic gratuit, solutions professionnelles contre moisissures, infiltrations et remontées capillaires."
+  }
+}

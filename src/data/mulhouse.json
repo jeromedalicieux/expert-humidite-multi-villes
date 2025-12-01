@@ -1,0 +1,33 @@
+{
+  "id": 31,
+  "slug": "mulhouse",
+  "name": "Mulhouse",
+  "domain": "expert-humidite-mulhouse.fr",
+  "department": "68",
+  "postalCode": "68100",
+  "region": "Grand Est",
+  "population": "Grande ville",
+  "climate": "semi-continental",
+  "humidity_context": "Ill, relief, brumes, passé industriel",
+  "neighborhoods": [
+    "Centre-ville",
+    "Bourtzwiller",
+    "Dornach",
+    "Coteaux"
+  ],
+  "nearbyTowns": [
+    "Illzach",
+    "Kingersheim",
+    "Wittenheim",
+    "Riedisheim",
+    "Rixheim",
+    "Pfastatt",
+    "Lutterbach",
+    "Brunstatt-Didenheim",
+    "Sausheim",
+    "Habsheim",
+    "Battenheim",
+    "Baldersheim"
+  ],
+  "variationGroup": "C"
+}
