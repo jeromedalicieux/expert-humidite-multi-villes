@@ -15,9 +15,11 @@ const { title, description, city, ogImage } = Astro.props;
 
 // Utiliser le domaine de la ville ou fallback sur le hostname actuel
 const currentDomain = city.domain || Astro.url.hostname;
-const canonicalURL = new URL(Astro.url.pathname, `https://www.${currentDomain}`);
-const defaultOgImage = new URL('/images/og-default.jpg', `https://www.${currentDomain}`);
-const ogImageURL = ogImage ? new URL(ogImage, `https://www.${currentDomain}`) : defaultOgImage;
+// Ajouter www. seulement si le domaine ne commence pas déjà par www.
+const fullDomain = currentDomain.startsWith('www.') ? currentDomain : `www.${currentDomain}`;
+const canonicalURL = new URL(Astro.url.pathname, `https://${fullDomain}`);
+const defaultOgImage = new URL('/images/og-default.jpg', `https://${fullDomain}`);
+const ogImageURL = ogImage ? new URL(ogImage, `https://${fullDomain}`) : defaultOgImage;
 
 // Schema.org enrichis
 const localBusinessSchema = generateLocalBusinessSchema(city, canonicalURL.href);
