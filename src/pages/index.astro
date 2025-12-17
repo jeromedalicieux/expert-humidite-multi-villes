@@ -197,7 +197,7 @@ const description = generateSEODescription(city);
         </h2>
 
         <p class="text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-          Notre expert intervient rapidement dans toute la métropole bordelaise et ses communes limitrophes
+          Notre expert intervient rapidement dans toute la métropole de {city.name} et ses communes limitrophes
         </p>
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
@@ -224,12 +224,12 @@ const description = generateSEODescription(city);
           <div class="prose prose-lg max-w-none text-gray-700">
             <p class="leading-relaxed">
               Que vous habitiez à <strong>{city.nearbyTowns.slice(0, 3).join(', ')}</strong> ou dans une autre commune
-              de la métropole bordelaise, notre expert en humidité se déplace rapidement pour réaliser un
+              de la métropole de {city.name}, notre expert en humidité se déplace rapidement pour réaliser un
               <strong> diagnostic complet et professionnel</strong> de vos problèmes d'humidité.
             </p>
             <p class="leading-relaxed mt-4">
-              Les problématiques d'humidité sont fréquentes dans l'ensemble de la région bordelaise en raison du
-              <strong> climat océanique</strong> et de la proximité de la Garonne. Remontées capillaires dans les maisons anciennes,
+              Les problématiques d'humidité sont fréquentes dans l'ensemble de la région {city.region} en raison du
+              <strong> climat {city.climate}</strong> et des spécificités locales. Remontées capillaires dans les maisons anciennes,
               infiltrations, moisissures et condensation nécessitent l'intervention d'un expert indépendant pour identifier
               précisément les causes et proposer des solutions durables.
             </p>

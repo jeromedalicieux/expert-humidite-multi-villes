@@ -1,13 +1,20 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import netlify from '@astrojs/netlify';
+import { defineConfig, envField } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server', // Mode SSR pour détecter le domaine à chaque requête
-  adapter: netlify(), // Adaptateur Netlify pour le déploiement
+  output: 'static', // Mode static pour générer des builds HTML statiques par ville
   vite: {
     plugins: [tailwindcss()]
+  },
+  env: {
+    schema: {
+      CITY_SLUG: envField.string({
+        context: 'server',
+        access: 'public',
+        default: 'bordeaux'
+      })
+    }
   }
 });

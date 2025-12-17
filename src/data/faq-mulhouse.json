@@ -1,18 +1,20 @@
-[
-  {
-    "q": "Pourquoi faire appel à un expert en humidité à Mulhouse ?",
-    "a": "À Mulhouse, le climat semi-continental et Ill, relief, brumes, passé industriel favorisent l'apparition de problèmes d'humidité. Un expert certifié diagnostique précisément l'origine (infiltration, condensation, remontées capillaires) et propose des solutions adaptées à votre bien."
-  },
-  {
-    "q": "Combien coûte une expertise humidité à Mulhouse ?",
-    "a": "Le tarif d'un diagnostic humidité à Mulhouse varie selon la surface et la complexité : entre 300€ et 800€ pour un appartement, 500€ à 1500€ pour une maison. Notre expertise inclut un rapport détaillé avec mesures et préconisations."
-  },
-  {
-    "q": "Quels sont les signes d'humidité dans un logement à Mulhouse ?",
-    "a": "Les indices révélateurs à Mulhouse : taches sombres ou auréoles sur les murs, moisissures noires, papier peint décollé, odeur de renfermé, condensation sur les vitres, salpêtre (dépôts blancs), bois gonflé. Ces symptômes nécessitent un diagnostic rapide."
-  },
-  {
-    "q": "Combien de temps dure un diagnostic humidité à Mulhouse ?",
-    "a": "Une expertise humidité complète à Mulhouse prend entre 1h30 et 3h selon la taille du bien. Notre expert utilise des appareils de mesure professionnels (hygromètre, humidimètre, caméra thermique) et vous remet le rapport sous 48 à 72h."
-  }
-]
+{
+  "faq": [
+    {
+      "question": "Pourquoi faire appel à un expert en humidité à Mulhouse ?",
+      "answer": "À Mulhouse, le climat semi-continental et Ill, relief, brumes, passé industriel favorisent l'apparition de problèmes d'humidité. Un expert certifié diagnostique précisément l'origine (infiltration, condensation, remontées capillaires) et propose des solutions adaptées à votre bien."
+    },
+    {
+      "question": "Combien coûte une expertise humidité à Mulhouse ?",
+      "answer": "Le tarif d'un diagnostic humidité à Mulhouse varie selon la surface et la complexité : entre 300€ et 800€ pour un appartement, 500€ à 1500€ pour une maison. Notre expertise inclut un rapport détaillé avec mesures et préconisations."
+    },
+    {
+      "question": "Quels sont les signes d'humidité dans un logement à Mulhouse ?",
+      "answer": "Les indices révélateurs à Mulhouse : taches sombres ou auréoles sur les murs, moisissures noires, papier peint décollé, odeur de renfermé, condensation sur les vitres, salpêtre (dépôts blancs), bois gonflé. Ces symptômes nécessitent un diagnostic rapide."
+    },
+    {
+      "question": "Combien de temps dure un diagnostic humidité à Mulhouse ?",
+      "answer": "Une expertise humidité complète à Mulhouse prend entre 1h30 et 3h selon la taille du bien. Notre expert utilise des appareils de mesure professionnels (hygromètre, humidimètre, caméra thermique) et vous remet le rapport sous 48 à 72h."
+    }
+  ]
+}

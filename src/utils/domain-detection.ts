@@ -21,11 +21,18 @@ const DOMAIN_TO_CITY_MAP: Record<string, string> = {
 };
 
 /**
- * Détecte la ville à afficher en fonction du domaine
+ * Détecte la ville à afficher en fonction du domaine ou de la variable d'environnement
  * @param hostname - Le hostname de la requête (ex: "expert-humidite-bordeaux.fr")
  * @returns Le slug de la ville (ex: "bordeaux")
  */
 export function detectCityFromDomain(hostname: string): string {
+  // PRIORITÉ 1 : Variable d'environnement Astro (pour les builds statiques)
+  const envCitySlug = import.meta.env.CITY_SLUG;
+  if (envCitySlug && envCitySlug !== 'bordeaux') {
+    return envCitySlug;
+  }
+
+  // PRIORITÉ 2 : Détection depuis le hostname
   // Normaliser le hostname (enlever le port si présent)
   const normalizedHost = hostname.split(':')[0].toLowerCase();
 
